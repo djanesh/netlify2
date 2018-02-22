@@ -21,6 +21,7 @@ disqusShortname = "janeshdevkota-com"
 # googleAnalytics = "UA-123-45"
 paginate = 7
 canonifyurls = true
+min_version = 0.20
 
 [permalinks]
   post = "/:year/:month/:slug/"
