@@ -31,7 +31,7 @@ see if any data is available within radial distance.
 ```{r, echo=FALSE}
 library(dplyr)
 library(dataRetrieval)
-temp <- read.table(text = "Conductivity
+read.table(text = "Conductivity
 Turbidity
 Alkalinity, total
 Biochemical oxygen demand, standard conditions
@@ -82,8 +82,10 @@ Depth, data-logger (non-ported)
 Light attenuation, depth at 99%
 Depth, Secchi disk depth
 Flow, stream stage (choice list)", sep = "\n", header = F) %>% 
-  knitr::kable()
+  knitr::kable(col.names = "Characteristic Name")
 ```
 
 The tutorial for dataRetrieval can be accessed at 
 `https://owi.usgs.gov/R/dataRetrieval.html#1`
+
+Now we will look at another issue:
