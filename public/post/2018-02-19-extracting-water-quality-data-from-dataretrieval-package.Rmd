@@ -123,13 +123,13 @@ head(temp_bbox)
 
 ```{r}
 siteInfo <- attr(temp_bbox, "siteInfo")
-siteInfo
+head(siteInfo)
 ```
 
 ## Plot stations using `leaflet` library.
 ```{r}
 leaflet(siteInfo) %>% 
-  addProviderTiles("CartoDB.Positron") %>% 
+  addTiles() %>%
   addCircleMarkers(~dec_lon_va, ~dec_lat_va, color = "red", popup = ~station_nm)
 ```
 

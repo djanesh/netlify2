@@ -129,7 +129,7 @@ head(siteInfo)
 ## Plot stations using `leaflet` library.
 ```{r}
 leaflet(siteInfo) %>% 
-  addTil
+  addTiles() %>%
   addCircleMarkers(~dec_lon_va, ~dec_lat_va, color = "red", popup = ~station_nm)
 ```
 

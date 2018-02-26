@@ -28,9 +28,9 @@ Andrew Ng. Certificate earned on December 1, 2017. [See Certificate](https://www
 * **Intro to SQL for Data Science** on DataCamp. [Certificate URL](https://www.datacamp.com/statement-of-accomplishment/course/f195cb2bdcc5b078ad8b7a50d86c06f0f34b2339)
 * **Introduction to Time Series Analysis**. [Certificate URL](https://www.datacamp.com/statement-of-accomplishment/course/8077bbacc7dc790d8f02e0c4c53c72f52cd4d769)
 * **Foundations of Probability in R** by David Robinson. [Certificate URL](https://www.datacamp.com/statement-of-accomplishment/course/106d347a2e29176bed79409ace9a094d6550545a)
-* **Forecasting using R** by Rob J. Hyndman [Certificate URL https://www.datacamp.com/statement-of-accomplishment/course/e8c27f5836901edb9d65e3505361a9803a59c08c]
-* **Machine Learning Toolbox** by Max Kuhn and Zachary Deane-Mayer [Certificate URL https://www.datacamp.com/statement-of-accomplishment/course/6088f995e2f829f91946e541b6dcb5128e43c83f]
-* **Building Web Applications in R** with Shiny by Mine Cetinkaya-Rundel [Certificate URL https://www.datacamp.com/statement-of-accomplishment/course/722b5f4e6c41f81090e1e286025dce25db75c560]
+* **Forecasting using R** by Rob J. Hyndman [Certificate URL] (https://www.datacamp.com/statement-of-accomplishment/course/e8c27f5836901edb9d65e3505361a9803a59c08c]
+* **Machine Learning Toolbox** by Max Kuhn and Zachary Deane-Mayer [Certificate URL] (https://www.datacamp.com/statement-of-accomplishment/course/6088f995e2f829f91946e541b6dcb5128e43c83f]
+* **Building Web Applications in R** with Shiny by Mine Cetinkaya-Rundel [Certificate URL] (https://www.datacamp.com/statement-of-accomplishment/course/722b5f4e6c41f81090e1e286025dce25db75c560]
 
 ## Contact me: 
 
