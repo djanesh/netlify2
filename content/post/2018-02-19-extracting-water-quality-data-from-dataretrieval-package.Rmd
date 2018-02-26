@@ -28,12 +28,13 @@ see if any data is available within radial distance.
 * characteristicType
 * characteristicName : CharacteristicName can be one of following
 
-```{r, echo=FALSE, warning=FALSE}
+```{r, echo=FALSE, warning=FALSE, message=FALSE}
 library(dplyr)
 library(dataRetrieval)
 library(dplyr)
 library(leaflet)
 library(DT)
+library(tibble)
 read.table(text = "Conductivity
 Turbidity
 Alkalinity, total
@@ -123,11 +124,12 @@ head(temp_bbox)
 
 ```{r}
 siteInfo <- attr(temp_bbox, "siteInfo")
-head(siteInfo)
+head(as.tibble(siteInfo))
 ```
 
 ## Plot stations using `leaflet` library.
 ```{r}
+library(leaflet)
 leaflet(siteInfo) %>% 
   addTiles() %>%
   addCircleMarkers(~dec_lon_va, ~dec_lat_va, color = "red", popup = ~station_nm)
