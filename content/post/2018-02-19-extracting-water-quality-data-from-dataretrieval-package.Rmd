@@ -28,9 +28,11 @@ see if any data is available within radial distance.
 * characteristicType
 * characteristicName : CharacteristicName can be one of following
 
-```{r, echo=FALSE}
+```{r, echo=FALSE, warning=FALSE}
 library(dplyr)
 library(dataRetrieval)
+library(dplyr)
+library(leaflet)
 read.table(text = "Conductivity
 Turbidity
 Alkalinity, total
@@ -82,10 +84,53 @@ Depth, data-logger (non-ported)
 Light attenuation, depth at 99%
 Depth, Secchi disk depth
 Flow, stream stage (choice list)", sep = "\n", header = F) %>% 
-  knitr::kable(col.names = "Characteristic Name")
+  #knitr::kable(col.names = "Characteristic Name")
+  DT::datatable()
 ```
 
-The tutorial for dataRetrieval can be accessed at 
-`https://owi.usgs.gov/R/dataRetrieval.html#1`
 
-Now we will look at another issue:
+# Extracting walker county Temperature data
+
+Let us try to see how many stations are there is walker county Alabama that has data for 2011 period. 
+
+To find out the countycode we can use the function: 
+```{r}
+dataRetrieval::countyCdLookup(state = "AL", county = "walker")
+```
+We can see that the county code of `Walker County` is `127`. Now, let us use `readWQPdata` function with countycode as follows:
+
+```{r}
+
+tempwalkercounty <- readWQPdata(countycode="US:01:127",startDate="2011-01-01",
+                                endDate = "2011-12-31",
+                                characteristicName="Temperature, water")
+
+```
+
+
+## Use of bounding box to extract the data 
+
+```{r}
+temp_bbox <- readWQPdata(bBox=c(-87.26, 33.59, -87.07, 33.825),
+                              startDate="2011-01-01",
+                              endDate = "2011-12-31",
+                              characteristicName="Temperature, water") 
+head(temp_bbox)
+```
+
+## Extracting the site information from `temp_bbox`
+
+```{r}
+siteInfo <- attr(temp_bbox, "siteInfo")
+siteInfo
+```
+
+## Plot stations using `leaflet` library.
+```{r}
+leaflet(siteInfo) %>% 
+  addProviderTiles("CartoDB.Positron") %>% 
+  addCircleMarkers(~dec_lon_va, ~dec_lat_va, color = "red", popup = ~station_nm)
+```
+
+I have just scratched the surface here and would like to encourage you guys to 
+visit the full tutorial at `https://owi.usgs.gov/R/dataRetrieval.html#1`.

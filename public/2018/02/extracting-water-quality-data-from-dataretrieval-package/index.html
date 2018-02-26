@@ -263,7 +263,28 @@ devtools::install_github(repo = &quot;USGS-R/dataRetrieval&quot;)The main funct
           
           <div class="post-content markdown" itemprop="articleBody">
             <div class="main-content-wrap">
-              <p>In this blog post, I will be showing some capabilities of <code>dataRetrieval</code> package by USGS to extract water quality data.</p>
+              <script src="/rmarkdown-libs/htmlwidgets/htmlwidgets.js"></script>
+<script src="/rmarkdown-libs/jquery/jquery.min.js"></script>
+<link href="/rmarkdown-libs/datatables-css/datatables-crosstalk.css" rel="stylesheet" />
+<script src="/rmarkdown-libs/datatables-binding/datatables.js"></script>
+<link href="/rmarkdown-libs/dt-core/css/jquery.dataTables.min.css" rel="stylesheet" />
+<link href="/rmarkdown-libs/dt-core/css/jquery.dataTables.extra.css" rel="stylesheet" />
+<script src="/rmarkdown-libs/dt-core/js/jquery.dataTables.min.js"></script>
+<link href="/rmarkdown-libs/crosstalk/css/crosstalk.css" rel="stylesheet" />
+<script src="/rmarkdown-libs/crosstalk/js/crosstalk.min.js"></script>
+<link href="/rmarkdown-libs/leaflet/leaflet.css" rel="stylesheet" />
+<script src="/rmarkdown-libs/leaflet/leaflet.js"></script>
+<link href="/rmarkdown-libs/leafletfix/leafletfix.css" rel="stylesheet" />
+<link href="/rmarkdown-libs/leaflet-label/leaflet.label.css" rel="stylesheet" />
+<script src="/rmarkdown-libs/leaflet-label/leaflet.label.js"></script>
+<script src="/rmarkdown-libs/Proj4Leaflet/proj4-compressed.js"></script>
+<script src="/rmarkdown-libs/Proj4Leaflet/proj4leaflet.js"></script>
+<script src="/rmarkdown-libs/leaflet-binding/leaflet.js"></script>
+<script src="/rmarkdown-libs/leaflet-providers/leaflet-providers.js"></script>
+<script src="/rmarkdown-libs/leaflet-providers-plugin/leaflet-providers-plugin.js"></script>
+
+
+<p>In this blog post, I will be showing some capabilities of <code>dataRetrieval</code> package by USGS to extract water quality data.</p>
 <p>To install the <code>dataRetrieval</code> package use the following command:</p>
 <pre class="r"><code>devtools::install_github(repo = &quot;USGS-R/dataRetrieval&quot;)</code></pre>
 <p>The main function I will be discussing is <code>readWQPdata</code>. The users can search the data using various options as shown below:</p>
@@ -284,170 +305,223 @@ devtools::install_github(repo = &quot;USGS-R/dataRetrieval&quot;)The main funct
 <pre><code>## The following objects are masked from &#39;package:base&#39;:
 ## 
 ##     intersect, setdiff, setequal, union</code></pre>
-<table>
-<thead>
-<tr class="header">
-<th align="left">Characteristic Name</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td align="left">Conductivity</td>
-</tr>
-<tr class="even">
-<td align="left">Turbidity</td>
-</tr>
-<tr class="odd">
-<td align="left">Alkalinity, total</td>
-</tr>
-<tr class="even">
-<td align="left">Biochemical oxygen demand, standard conditions</td>
-</tr>
-<tr class="odd">
-<td align="left">Chloride</td>
-</tr>
-<tr class="even">
-<td align="left">Chemical oxygen demand</td>
-</tr>
-<tr class="odd">
-<td align="left">Hardness, Ca, Mg</td>
-</tr>
-<tr class="even">
-<td align="left">Inorganic nitrogen (nitrate and nitrite)</td>
-</tr>
-<tr class="odd">
-<td align="left">Total dissolved solids</td>
-</tr>
-<tr class="even">
-<td align="left">Kjeldahl nitrogen</td>
-</tr>
-<tr class="odd">
-<td align="left">Phosphorus</td>
-</tr>
-<tr class="even">
-<td align="left">Total suspended solids</td>
-</tr>
-<tr class="odd">
-<td align="left">Temperature, air</td>
-</tr>
-<tr class="even">
-<td align="left">Temperature, water</td>
-</tr>
-<tr class="odd">
-<td align="left">pH</td>
-</tr>
-<tr class="even">
-<td align="left">Dissolved oxygen (DO)</td>
-</tr>
-<tr class="odd">
-<td align="left">Weather condition (WMO code 4501) (choice list)</td>
-</tr>
-<tr class="even">
-<td align="left">Cadmium</td>
-</tr>
-<tr class="odd">
-<td align="left">Cyanide</td>
-</tr>
-<tr class="even">
-<td align="left">Chromium</td>
-</tr>
-<tr class="odd">
-<td align="left">Copper</td>
-</tr>
-<tr class="even">
-<td align="left">Fecal Coliform</td>
-</tr>
-<tr class="odd">
-<td align="left">Iron</td>
-</tr>
-<tr class="even">
-<td align="left">Manganese</td>
-</tr>
-<tr class="odd">
-<td align="left">Lead</td>
-</tr>
-<tr class="even">
-<td align="left">Phenol</td>
-</tr>
-<tr class="odd">
-<td align="left">Organic Nitrogen</td>
-</tr>
-<tr class="even">
-<td align="left">Aluminum</td>
-</tr>
-<tr class="odd">
-<td align="left">Arsenic</td>
-</tr>
-<tr class="even">
-<td align="left">Mercury</td>
-</tr>
-<tr class="odd">
-<td align="left">Ammonia-nitrogen</td>
-</tr>
-<tr class="even">
-<td align="left">Silver</td>
-</tr>
-<tr class="odd">
-<td align="left">Nickel</td>
-</tr>
-<tr class="even">
-<td align="left">Zinc</td>
-</tr>
-<tr class="odd">
-<td align="left">Depth, bottom</td>
-</tr>
-<tr class="even">
-<td align="left">RBP Water Odors (choice list)</td>
-</tr>
-<tr class="odd">
-<td align="left">RBP Water Surface Oils (choice list)</td>
-</tr>
-<tr class="even">
-<td align="left">Chlorophyll a</td>
-</tr>
-<tr class="odd">
-<td align="left">Orthophosphate</td>
-</tr>
-<tr class="even">
-<td align="left">Specific conductance</td>
-</tr>
-<tr class="odd">
-<td align="left">Antimony</td>
-</tr>
-<tr class="even">
-<td align="left">Selenium</td>
-</tr>
-<tr class="odd">
-<td align="left">Thallium</td>
-</tr>
-<tr class="even">
-<td align="left">Calcium</td>
-</tr>
-<tr class="odd">
-<td align="left">Magnesium</td>
-</tr>
-<tr class="even">
-<td align="left">Escherichia coli</td>
-</tr>
-<tr class="odd">
-<td align="left">Dissolved oxygen saturation</td>
-</tr>
-<tr class="even">
-<td align="left">Depth, data-logger (non-ported)</td>
-</tr>
-<tr class="odd">
-<td align="left">Light attenuation, depth at 99%</td>
-</tr>
-<tr class="even">
-<td align="left">Depth, Secchi disk depth</td>
-</tr>
-<tr class="odd">
-<td align="left">Flow, stream stage (choice list)</td>
-</tr>
-</tbody>
-</table>
-<p>The tutorial for dataRetrieval can be accessed at <code>https://owi.usgs.gov/R/dataRetrieval.html#1</code></p>
-<p>Now we will look at another issue:</p>
+<div id="htmlwidget-1" style="width:100%;height:auto;" class="datatables html-widget"></div>
+<script type="application/json" data-for="htmlwidget-1">{"x":{"filter":"none","data":[["1","2","3","4","5","6","7","8","9","10","11","12","13","14","15","16","17","18","19","20","21","22","23","24","25","26","27","28","29","30","31","32","33","34","35","36","37","38","39","40","41","42","43","44","45","46","47","48","49","50","51"],["Conductivity","Turbidity","Alkalinity, total","Biochemical oxygen demand, standard conditions","Chloride","Chemical oxygen demand","Hardness, Ca, Mg","Inorganic nitrogen (nitrate and nitrite)","Total dissolved solids","Kjeldahl nitrogen","Phosphorus","Total suspended solids","Temperature, air","Temperature, water","pH","Dissolved oxygen (DO)","Weather condition (WMO code 4501) (choice list)","Cadmium","Cyanide","Chromium","Copper","Fecal Coliform","Iron","Manganese","Lead","Phenol","Organic Nitrogen","Aluminum","Arsenic","Mercury","Ammonia-nitrogen","Silver","Nickel","Zinc","Depth, bottom","RBP Water Odors (choice list)","RBP Water Surface Oils (choice list)","Chlorophyll a","Orthophosphate","Specific conductance","Antimony","Selenium","Thallium","Calcium","Magnesium","Escherichia coli","Dissolved oxygen saturation","Depth, data-logger (non-ported)","Light attenuation, depth at 99%","Depth, Secchi disk depth","Flow, stream stage (choice list)"]],"container":"<table class=\"display\">\n  <thead>\n    <tr>\n      <th> <\/th>\n      <th>V1<\/th>\n    <\/tr>\n  <\/thead>\n<\/table>","options":{"order":[],"autoWidth":false,"orderClasses":false,"columnDefs":[{"orderable":false,"targets":0}]}},"evals":[],"jsHooks":[]}</script>
+<div id="extracting-walker-county-temperature-data" class="section level1">
+<h1>Extracting walker county Temperature data</h1>
+<p>Let us try to see how many stations are there is walker county Alabama that has data for 2011 period.</p>
+<p>To find out the countycode we can use the function:</p>
+<pre class="r"><code>dataRetrieval::countyCdLookup(state = &quot;AL&quot;, county = &quot;walker&quot;)</code></pre>
+<pre><code>## [1] &quot;127&quot;</code></pre>
+<p>We can see that the county code of <code>Walker County</code> is <code>127</code>. Now, let us use <code>readWQPdata</code> function with countycode as follows:</p>
+<pre class="r"><code>tempwalkercounty &lt;- readWQPdata(countycode=&quot;US:01:127&quot;,startDate=&quot;2011-01-01&quot;,
+                                endDate = &quot;2011-12-31&quot;,
+                                characteristicName=&quot;Temperature, water&quot;)</code></pre>
+<div id="use-of-bounding-box-to-extract-the-data" class="section level2">
+<h2>Use of bounding box to extract the data</h2>
+<pre class="r"><code>temp_bbox &lt;- readWQPdata(bBox=c(-87.26, 33.59, -87.07, 33.825),
+                              startDate=&quot;2011-01-01&quot;,
+                              endDate = &quot;2011-12-31&quot;,
+                              characteristicName=&quot;Temperature, water&quot;) 
+head(temp_bbox)</code></pre>
+<pre><code>## # A tibble: 6 x 65
+##   OrganizationIden~ OrganizationFormal~ ActivityIdentif~ ActivityTypeCode 
+##   &lt;chr&gt;             &lt;chr&gt;               &lt;chr&gt;            &lt;chr&gt;            
+## 1 21AWIC            ALABAMA DEPT. OF E~ 21AWIC-184364_1~ Field Msr/Obs-Po~
+## 2 21AWIC            ALABAMA DEPT. OF E~ 21AWIC-201110_1~ Field Msr/Obs-Po~
+## 3 21AWIC            ALABAMA DEPT. OF E~ 21AWIC-201108_1~ Field Msr/Obs-Po~
+## 4 21AWIC            ALABAMA DEPT. OF E~ 21AWIC-201108_1~ Field Msr/Obs-Po~
+## 5 21AWIC            ALABAMA DEPT. OF E~ 21AWIC-201113_1~ Field Msr/Obs-Po~
+## 6 21AWIC            ALABAMA DEPT. OF E~ 21AWIC-201110_1~ Field Msr/Obs-Po~
+## # ... with 61 more variables: ActivityMediaName &lt;chr&gt;,
+## #   ActivityMediaSubdivisionName &lt;chr&gt;, ActivityStartDate &lt;date&gt;,
+## #   ActivityStartTime.Time &lt;chr&gt;, ActivityStartTime.TimeZoneCode &lt;chr&gt;,
+## #   ActivityEndDate &lt;date&gt;, ActivityEndTime.Time &lt;chr&gt;,
+## #   ActivityEndTime.TimeZoneCode &lt;chr&gt;,
+## #   ActivityDepthHeightMeasure.MeasureValue &lt;dbl&gt;,
+## #   ActivityDepthHeightMeasure.MeasureUnitCode &lt;chr&gt;,
+## #   ActivityDepthAltitudeReferencePointText &lt;chr&gt;,
+## #   ActivityTopDepthHeightMeasure.MeasureValue &lt;chr&gt;,
+## #   ActivityTopDepthHeightMeasure.MeasureUnitCode &lt;chr&gt;,
+## #   ActivityBottomDepthHeightMeasure.MeasureValue &lt;chr&gt;,
+## #   ActivityBottomDepthHeightMeasure.MeasureUnitCode &lt;chr&gt;,
+## #   ProjectIdentifier &lt;int&gt;, ActivityConductingOrganizationText &lt;chr&gt;,
+## #   MonitoringLocationIdentifier &lt;chr&gt;, ActivityCommentText &lt;chr&gt;,
+## #   SampleAquifer &lt;chr&gt;, HydrologicCondition &lt;chr&gt;, HydrologicEvent &lt;chr&gt;,
+## #   SampleCollectionMethod.MethodIdentifier &lt;chr&gt;,
+## #   SampleCollectionMethod.MethodIdentifierContext &lt;chr&gt;,
+## #   SampleCollectionMethod.MethodName &lt;chr&gt;,
+## #   SampleCollectionEquipmentName &lt;chr&gt;,
+## #   ResultDetectionConditionText &lt;chr&gt;, CharacteristicName &lt;chr&gt;,
+## #   ResultSampleFractionText &lt;chr&gt;, ResultMeasureValue &lt;dbl&gt;,
+## #   ResultMeasure.MeasureUnitCode &lt;chr&gt;, MeasureQualifierCode &lt;chr&gt;,
+## #   ResultStatusIdentifier &lt;chr&gt;, StatisticalBaseCode &lt;chr&gt;,
+## #   ResultValueTypeName &lt;chr&gt;, ResultWeightBasisText &lt;chr&gt;,
+## #   ResultTimeBasisText &lt;chr&gt;, ResultTemperatureBasisText &lt;chr&gt;,
+## #   ResultParticleSizeBasisText &lt;chr&gt;, PrecisionValue &lt;chr&gt;,
+## #   ResultCommentText &lt;chr&gt;, USGSPCode &lt;chr&gt;,
+## #   ResultDepthHeightMeasure.MeasureValue &lt;chr&gt;,
+## #   ResultDepthHeightMeasure.MeasureUnitCode &lt;chr&gt;,
+## #   ResultDepthAltitudeReferencePointText &lt;chr&gt;,
+## #   SubjectTaxonomicName &lt;chr&gt;, SampleTissueAnatomyName &lt;chr&gt;,
+## #   ResultAnalyticalMethod.MethodIdentifier &lt;chr&gt;,
+## #   ResultAnalyticalMethod.MethodIdentifierContext &lt;chr&gt;,
+## #   ResultAnalyticalMethod.MethodName &lt;chr&gt;, MethodDescriptionText &lt;chr&gt;,
+## #   LaboratoryName &lt;chr&gt;, AnalysisStartDate &lt;date&gt;,
+## #   ResultLaboratoryCommentText &lt;chr&gt;,
+## #   DetectionQuantitationLimitTypeName &lt;chr&gt;,
+## #   DetectionQuantitationLimitMeasure.MeasureValue &lt;dbl&gt;,
+## #   DetectionQuantitationLimitMeasure.MeasureUnitCode &lt;chr&gt;,
+## #   PreparationStartDate &lt;date&gt;, ProviderName &lt;chr&gt;,
+## #   ActivityStartDateTime &lt;dttm&gt;, ActivityEndDateTime &lt;dttm&gt;</code></pre>
+</div>
+<div id="extracting-the-site-information-from-temp_bbox" class="section level2">
+<h2>Extracting the site information from <code>temp_bbox</code></h2>
+<pre class="r"><code>siteInfo &lt;- attr(temp_bbox, &quot;siteInfo&quot;)
+siteInfo</code></pre>
+<pre><code>##   station_nm agency_cd     site_no dec_lat_va dec_lon_va    hucCd
+## 1     CLCJ-1    21AWIC 21AWIC-2228   33.61248  -87.13851 03160111
+## 2     CLCJ-3    21AWIC 21AWIC-7015   33.60724  -87.13526 03160111
+## 3     CLCJ-4    21AWIC 21AWIC-7016   33.60010  -87.13849 03160111
+## 4    CHMJ-47    21AWIC 21AWIC-7033   33.60916  -87.13556 03160111
+## 5     WIMJ-1    21AWIC 21AWIC-7034   33.60111  -87.13917 03160111
+##   OrganizationIdentifier
+## 1                 21AWIC
+## 2                 21AWIC
+## 3                 21AWIC
+## 4                 21AWIC
+## 5                 21AWIC
+##                                           OrganizationFormalName
+## 1 ALABAMA DEPT. OF ENVIRONMENTAL MANAGEMENT - WATER QUALITY DATA
+## 2 ALABAMA DEPT. OF ENVIRONMENTAL MANAGEMENT - WATER QUALITY DATA
+## 3 ALABAMA DEPT. OF ENVIRONMENTAL MANAGEMENT - WATER QUALITY DATA
+## 4 ALABAMA DEPT. OF ENVIRONMENTAL MANAGEMENT - WATER QUALITY DATA
+## 5 ALABAMA DEPT. OF ENVIRONMENTAL MANAGEMENT - WATER QUALITY DATA
+##   MonitoringLocationIdentifier MonitoringLocationName
+## 1                  21AWIC-2228                 CLCJ-1
+## 2                  21AWIC-7015                 CLCJ-3
+## 3                  21AWIC-7016                 CLCJ-4
+## 4                  21AWIC-7033                CHMJ-47
+## 5                  21AWIC-7034                 WIMJ-1
+##   MonitoringLocationTypeName
+## 1               River/Stream
+## 2               River/Stream
+## 3               River/Stream
+## 4        Mine/Mine Discharge
+## 5        Mine/Mine Discharge
+##                                        MonitoringLocationDescriptionText
+## 1 Coal Cr @ AL Hwy 269  (dirt access road at bottom of hollow to creek).
+## 2                             Coal Ck @ Alliance Rd; DS TPPJ-1 /O.F. #47
+## 3           Coal Ck @ parallel to Alliance Rd just DS of WIMJ-1 /O.F. #1
+## 4                                            receiving stream Coal Creek
+## 5                                           receiving stream Coal Creek;
+##   HUCEightDigitCode DrainageAreaMeasure.MeasureValue
+## 1          03160111                             &lt;NA&gt;
+## 2          03160111                             &lt;NA&gt;
+## 3          03160111                             &lt;NA&gt;
+## 4          03160111                             &lt;NA&gt;
+## 5          03160111                             &lt;NA&gt;
+##   DrainageAreaMeasure.MeasureUnitCode
+## 1                                &lt;NA&gt;
+## 2                                &lt;NA&gt;
+## 3                                &lt;NA&gt;
+## 4                                &lt;NA&gt;
+## 5                                &lt;NA&gt;
+##   ContributingDrainageAreaMeasure.MeasureValue
+## 1                                         &lt;NA&gt;
+## 2                                         &lt;NA&gt;
+## 3                                         &lt;NA&gt;
+## 4                                         &lt;NA&gt;
+## 5                                         &lt;NA&gt;
+##   ContributingDrainageAreaMeasure.MeasureUnitCode LatitudeMeasure
+## 1                                            &lt;NA&gt;        33.61248
+## 2                                            &lt;NA&gt;        33.60724
+## 3                                            &lt;NA&gt;        33.60010
+## 4                                            &lt;NA&gt;        33.60916
+## 5                                            &lt;NA&gt;        33.60111
+##   LongitudeMeasure SourceMapScaleNumeric
+## 1        -87.13851                    NA
+## 2        -87.13526                 24000
+## 3        -87.13849                 24000
+## 4        -87.13556                 24000
+## 5        -87.13917                 24000
+##   HorizontalAccuracyMeasure.MeasureValue
+## 1                                   &lt;NA&gt;
+## 2                                   &lt;NA&gt;
+## 3                                   &lt;NA&gt;
+## 4                                   &lt;NA&gt;
+## 5                                   &lt;NA&gt;
+##   HorizontalAccuracyMeasure.MeasureUnitCode HorizontalCollectionMethodName
+## 1                                      &lt;NA&gt;                        Unknown
+## 2                                      &lt;NA&gt;              Interpolation-Map
+## 3                                      &lt;NA&gt;              Interpolation-Map
+## 4                                      &lt;NA&gt;              Interpolation-Map
+## 5                                      &lt;NA&gt;              Interpolation-Map
+##   HorizontalCoordinateReferenceSystemDatumName
+## 1                                        UNKWN
+## 2                                        NAD83
+## 3                                        NAD83
+## 4                                        NAD83
+## 5                                        NAD83
+##   VerticalMeasure.MeasureValue VerticalMeasure.MeasureUnitCode
+## 1                         &lt;NA&gt;                            &lt;NA&gt;
+## 2                         &lt;NA&gt;                            &lt;NA&gt;
+## 3                         &lt;NA&gt;                            &lt;NA&gt;
+## 4                         &lt;NA&gt;                            &lt;NA&gt;
+## 5                         &lt;NA&gt;                            &lt;NA&gt;
+##   VerticalAccuracyMeasure.MeasureValue
+## 1                                 &lt;NA&gt;
+## 2                                 &lt;NA&gt;
+## 3                                 &lt;NA&gt;
+## 4                                 &lt;NA&gt;
+## 5                                 &lt;NA&gt;
+##   VerticalAccuracyMeasure.MeasureUnitCode VerticalCollectionMethodName
+## 1                                    &lt;NA&gt;                         &lt;NA&gt;
+## 2                                    &lt;NA&gt;                         &lt;NA&gt;
+## 3                                    &lt;NA&gt;                         &lt;NA&gt;
+## 4                                    &lt;NA&gt;                         &lt;NA&gt;
+## 5                                    &lt;NA&gt;                         &lt;NA&gt;
+##   VerticalCoordinateReferenceSystemDatumName CountryCode StateCode
+## 1                                       &lt;NA&gt;          US        01
+## 2                                       &lt;NA&gt;          US        01
+## 3                                       &lt;NA&gt;          US        01
+## 4                                       &lt;NA&gt;          US        01
+## 5                                       &lt;NA&gt;          US        01
+##   CountyCode AquiferName FormationTypeText AquiferTypeName
+## 1        073        &lt;NA&gt;              &lt;NA&gt;            &lt;NA&gt;
+## 2        073        &lt;NA&gt;              &lt;NA&gt;            &lt;NA&gt;
+## 3        073        &lt;NA&gt;              &lt;NA&gt;            &lt;NA&gt;
+## 4        073        &lt;NA&gt;              &lt;NA&gt;            &lt;NA&gt;
+## 5        073        &lt;NA&gt;              &lt;NA&gt;            &lt;NA&gt;
+##   ConstructionDateText WellDepthMeasure.MeasureValue
+## 1                 &lt;NA&gt;                            NA
+## 2                 &lt;NA&gt;                            NA
+## 3                 &lt;NA&gt;                            NA
+## 4                 &lt;NA&gt;                            NA
+## 5                 &lt;NA&gt;                            NA
+##   WellDepthMeasure.MeasureUnitCode WellHoleDepthMeasure.MeasureValue
+## 1                             &lt;NA&gt;                                NA
+## 2                             &lt;NA&gt;                                NA
+## 3                             &lt;NA&gt;                                NA
+## 4                             &lt;NA&gt;                                NA
+## 5                             &lt;NA&gt;                                NA
+##   WellHoleDepthMeasure.MeasureUnitCode ProviderName
+## 1                                 &lt;NA&gt;       STORET
+## 2                                 &lt;NA&gt;       STORET
+## 3                                 &lt;NA&gt;       STORET
+## 4                                 &lt;NA&gt;       STORET
+## 5                                 &lt;NA&gt;       STORET</code></pre>
+</div>
+<div id="plot-stations-using-leaflet-library." class="section level2">
+<h2>Plot stations using <code>leaflet</code> library.</h2>
+<pre class="r"><code>leaflet(siteInfo) %&gt;% 
+  addProviderTiles(&quot;CartoDB.Positron&quot;) %&gt;% 
+  addCircleMarkers(~dec_lon_va, ~dec_lat_va, color = &quot;red&quot;, popup = ~station_nm)</code></pre>
+<div id="htmlwidget-2" style="width:672px;height:480px;" class="leaflet html-widget"></div>
+<script type="application/json" data-for="htmlwidget-2">{"x":{"options":{"crs":{"crsClass":"L.CRS.EPSG3857","code":null,"proj4def":null,"projectedBounds":null,"options":{}}},"calls":[{"method":"addProviderTiles","args":["CartoDB.Positron",null,null,{"errorTileUrl":"","noWrap":false,"zIndex":null,"unloadInvisibleTiles":null,"updateWhenIdle":null,"detectRetina":false,"reuseTiles":false}]},{"method":"addCircleMarkers","args":[[33.612475,33.607237,33.600105,33.609161,33.601111],[-87.13851,-87.135261,-87.138493,-87.135563,-87.139167],10,null,null,{"lineCap":null,"lineJoin":null,"clickable":true,"pointerEvents":null,"className":"","stroke":true,"color":"red","weight":5,"opacity":0.5,"fill":true,"fillColor":"red","fillOpacity":0.2,"dashArray":null},null,null,["CLCJ-1","CLCJ-3","CLCJ-4","CHMJ-47","WIMJ-1"],null,null,null,null]}],"limits":{"lat":[33.600105,33.612475],"lng":[-87.139167,-87.135261]}},"evals":[],"jsHooks":[]}</script>
+<p>I have just scratched the surface here and would like to encourage you guys to visit the full tutorial at <code>https://owi.usgs.gov/R/dataRetrieval.html#1</code>.</p>
+</div>
+</div>
 
               
             </div>
