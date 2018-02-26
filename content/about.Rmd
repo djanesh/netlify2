@@ -32,6 +32,7 @@ Andrew Ng. Certificate earned on December 1, 2017. [See Certificate](https://www
 * **Forecasting using R** by Rob J. Hyndman. [Certificate URL](https://www.datacamp.com/statement-of-accomplishment/course/e8c27f5836901edb9d65e3505361a9803a59c08c)
 * **Machine Learning Toolbox** by Max Kuhn and Zachary Deane-Mayer. [Certificate URL](https://www.datacamp.com/statement-of-accomplishment/course/6088f995e2f829f91946e541b6dcb5128e43c83f)
 * **Building Web Applications in R** with Shiny by Mine Cetinkaya-Rundel. [Certificate URL](https://www.datacamp.com/statement-of-accomplishment/course/722b5f4e6c41f81090e1e286025dce25db75c560)
+* **Building Web Applications in R with Shiny: Case Studies** by Dean Attali. [Certificate URL](https://www.datacamp.com/statement-of-accomplishment/course/cca612143cf6a1a89bd00c898f360daadb494286)
 
 ## Contact me: 
 

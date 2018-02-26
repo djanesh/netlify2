@@ -35,6 +35,8 @@ library(dplyr)
 library(leaflet)
 library(DT)
 library(tibble)
+library(DT)
+
 read.table(text = "Conductivity
 Turbidity
 Alkalinity, total
