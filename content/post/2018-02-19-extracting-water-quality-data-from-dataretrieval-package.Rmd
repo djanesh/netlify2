@@ -33,6 +33,7 @@ library(dplyr)
 library(dataRetrieval)
 library(dplyr)
 library(leaflet)
+library(DT)
 read.table(text = "Conductivity
 Turbidity
 Alkalinity, total
@@ -122,13 +123,13 @@ head(temp_bbox)
 
 ```{r}
 siteInfo <- attr(temp_bbox, "siteInfo")
-siteInfo
+head(siteInfo)
 ```
 
 ## Plot stations using `leaflet` library.
 ```{r}
 leaflet(siteInfo) %>% 
-  addProviderTiles("CartoDB.Positron") %>% 
+  addTil
   addCircleMarkers(~dec_lon_va, ~dec_lat_va, color = "red", popup = ~station_nm)
 ```
 
