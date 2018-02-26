@@ -131,7 +131,7 @@ head(as.tibble(siteInfo))
 ```{r}
 library(leaflet)
 leaflet(siteInfo) %>% 
-  addTiles() %>%
+  addProviderTiles(providers$OpenStreetMap) %>% 
   addCircleMarkers(~dec_lon_va, ~dec_lat_va, color = "red", popup = ~station_nm)
 ```
 

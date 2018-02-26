@@ -280,6 +280,8 @@ devtools::install_github(repo = &quot;USGS-R/dataRetrieval&quot;)The main funct
 <script src="/rmarkdown-libs/Proj4Leaflet/proj4-compressed.js"></script>
 <script src="/rmarkdown-libs/Proj4Leaflet/proj4leaflet.js"></script>
 <script src="/rmarkdown-libs/leaflet-binding/leaflet.js"></script>
+<script src="/rmarkdown-libs/leaflet-providers/leaflet-providers.js"></script>
+<script src="/rmarkdown-libs/leaflet-providers-plugin/leaflet-providers-plugin.js"></script>
 
 
 <p>In this blog post, I will be showing some capabilities of <code>dataRetrieval</code> package by USGS to extract water quality data.</p>
@@ -408,10 +410,10 @@ head(as.tibble(siteInfo))</code></pre>
 <h2>Plot stations using <code>leaflet</code> library.</h2>
 <pre class="r"><code>library(leaflet)
 leaflet(siteInfo) %&gt;% 
-  addTiles() %&gt;%
+  addProviderTiles(providers$OpenStreetMap) %&gt;% 
   addCircleMarkers(~dec_lon_va, ~dec_lat_va, color = &quot;red&quot;, popup = ~station_nm)</code></pre>
 <div id="htmlwidget-2" style="width:672px;height:480px;" class="leaflet html-widget"></div>
-<script type="application/json" data-for="htmlwidget-2">{"x":{"options":{"crs":{"crsClass":"L.CRS.EPSG3857","code":null,"proj4def":null,"projectedBounds":null,"options":{}}},"calls":[{"method":"addTiles","args":["https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png",null,null,{"minZoom":0,"maxZoom":18,"maxNativeZoom":null,"tileSize":256,"subdomains":"abc","errorTileUrl":"","tms":false,"continuousWorld":false,"noWrap":false,"zoomOffset":0,"zoomReverse":false,"opacity":1,"zIndex":null,"unloadInvisibleTiles":null,"updateWhenIdle":null,"detectRetina":false,"reuseTiles":false,"attribution":"&copy; <a href=\"http://openstreetmap.org\">OpenStreetMap<\/a> contributors, <a href=\"http://creativecommons.org/licenses/by-sa/2.0/\">CC-BY-SA<\/a>"}]},{"method":"addCircleMarkers","args":[[33.612475,33.607237,33.600105,33.609161,33.601111],[-87.13851,-87.135261,-87.138493,-87.135563,-87.139167],10,null,null,{"lineCap":null,"lineJoin":null,"clickable":true,"pointerEvents":null,"className":"","stroke":true,"color":"red","weight":5,"opacity":0.5,"fill":true,"fillColor":"red","fillOpacity":0.2,"dashArray":null},null,null,["CLCJ-1","CLCJ-3","CLCJ-4","CHMJ-47","WIMJ-1"],null,null,null,null]}],"limits":{"lat":[33.600105,33.612475],"lng":[-87.139167,-87.135261]}},"evals":[],"jsHooks":[]}</script>
+<script type="application/json" data-for="htmlwidget-2">{"x":{"options":{"crs":{"crsClass":"L.CRS.EPSG3857","code":null,"proj4def":null,"projectedBounds":null,"options":{}}},"calls":[{"method":"addProviderTiles","args":["OpenStreetMap",null,null,{"errorTileUrl":"","noWrap":false,"zIndex":null,"unloadInvisibleTiles":null,"updateWhenIdle":null,"detectRetina":false,"reuseTiles":false}]},{"method":"addCircleMarkers","args":[[33.612475,33.607237,33.600105,33.609161,33.601111],[-87.13851,-87.135261,-87.138493,-87.135563,-87.139167],10,null,null,{"lineCap":null,"lineJoin":null,"clickable":true,"pointerEvents":null,"className":"","stroke":true,"color":"red","weight":5,"opacity":0.5,"fill":true,"fillColor":"red","fillOpacity":0.2,"dashArray":null},null,null,["CLCJ-1","CLCJ-3","CLCJ-4","CHMJ-47","WIMJ-1"],null,null,null,null]}],"limits":{"lat":[33.600105,33.612475],"lng":[-87.139167,-87.135261]}},"evals":[],"jsHooks":[]}</script>
 <p>I have just scratched the surface here and would like to encourage you guys to visit the full tutorial at <code>https://owi.usgs.gov/R/dataRetrieval.html#1</code>.</p>
 </div>
 </div>
