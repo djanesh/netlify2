@@ -36,59 +36,7 @@ library(leaflet)
 library(DT)
 library(tibble)
 library(DT)
-
-read.table(text = "Conductivity
-Turbidity
-Alkalinity, total
-Biochemical oxygen demand, standard conditions
-Chloride
-Chemical oxygen demand
-Hardness, Ca, Mg
-Inorganic nitrogen (nitrate and nitrite)
-Total dissolved solids
-Kjeldahl nitrogen
-Phosphorus
-Total suspended solids
-Temperature, air
-Temperature, water
-pH
-Dissolved oxygen (DO)
-Weather condition (WMO code 4501) (choice list)
-Cadmium
-Cyanide
-Chromium
-Copper
-Fecal Coliform
-Iron
-Manganese
-Lead
-Phenol
-Organic Nitrogen
-Aluminum
-Arsenic
-Mercury
-Ammonia-nitrogen
-Silver
-Nickel
-Zinc
-Depth, bottom
-RBP Water Odors (choice list)
-RBP Water Surface Oils (choice list)
-Chlorophyll a
-Orthophosphate
-Specific conductance
-Antimony
-Selenium
-Thallium
-Calcium
-Magnesium
-Escherichia coli
-Dissolved oxygen saturation
-Depth, data-logger (non-ported)
-Light attenuation, depth at 99%
-Depth, Secchi disk depth
-Flow, stream stage (choice list)", sep = "\n", header = F) %>% 
-  #knitr::kable(col.names = "Characteristic Name")
+read.table(file = "../../data/0219_waterquality/characteristic_name.txt",sep = "\n", header = F ) %>%
   DT::datatable()
 ```
 
@@ -132,9 +80,10 @@ head(as.tibble(siteInfo))
 ## Plot stations using `leaflet` library.
 ```{r}
 library(leaflet)
-leaflet(siteInfo) %>% 
+m <- leaflet(siteInfo) %>% 
   addProviderTiles(providers$OpenStreetMap) %>% 
   addCircleMarkers(~dec_lon_va, ~dec_lat_va, color = "red", popup = ~station_nm)
+m 
 ```
 
 I have just scratched the surface here and would like to encourage you guys to 

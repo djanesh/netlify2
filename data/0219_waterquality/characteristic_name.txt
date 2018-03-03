@@ -1,0 +1,51 @@
+Conductivity
+Turbidity
+Alkalinity, total
+Biochemical oxygen demand, standard conditions
+Chloride
+Chemical oxygen demand
+Hardness, Ca, Mg
+Inorganic nitrogen (nitrate and nitrite)
+Total dissolved solids
+Kjeldahl nitrogen
+Phosphorus
+Total suspended solids
+Temperature, air
+Temperature, water
+pH
+Dissolved oxygen (DO)
+Weather condition (WMO code 4501) (choice list)
+Cadmium
+Cyanide
+Chromium
+Copper
+Fecal Coliform
+Iron
+Manganese
+Lead
+Phenol
+Organic Nitrogen
+Aluminum
+Arsenic
+Mercury
+Ammonia-nitrogen
+Silver
+Nickel
+Zinc
+Depth, bottom
+RBP Water Odors (choice list)
+RBP Water Surface Oils (choice list)
+Chlorophyll a
+Orthophosphate
+Specific conductance
+Antimony
+Selenium
+Thallium
+Calcium
+Magnesium
+Escherichia coli
+Dissolved oxygen saturation
+Depth, data-logger (non-ported)
+Light attenuation, depth at 99%
+Depth, Secchi disk depth
+Flow, stream stage (choice list)
