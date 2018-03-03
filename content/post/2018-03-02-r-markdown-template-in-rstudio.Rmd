@@ -1,0 +1,138 @@
+---
+title: R Markdown template in Rstudio
+author: ~
+date: '2018-03-02'
+slug: r-markdown-template-in-rstudio
+categories: []
+tags: []
+---
+
+I have been using the `xarinagn` package developed by Yihui Xie for a while now 
+and have been using that to create presentations within my company. I really like
+what `xaringan` offers to the R users. I had modified the YAML of the `markdown` page 
+a little so that I could have my own css file and my layout which displays company 
+name and logo at the footer. I was copying and pasting the `css` file and `logo` file 
+to all the presentation folder I would create. After sometime of copying and pasting 
+process, I thought to myself that may be somebody has already developed tools for 
+things like this so you can have your own template and that would eliminate this 
+clunky method of copying and pasting to get the desired layout of your presentation. 
+
+I went to our old friend Google and asked on how to create a template on RStudio. 
+Then I found out the post written by `Chester Ismay` which describes the process 
+of creating your own custom template that can be used in Rstudio. I was very excited. 
+
+The basic principle behind creating these templates is that you would create a R package 
+and would include `skeleton.Rmd` , and any files that 
+would be required for that `skeleton.Rmd` and put in the `skeleton` folder in the `inst` 
+folder of the package that you create. 
+
+Let me give you an example. We can use `devtools` R package to create a new package 
+for us. Use the following command to create a new package. 
+
+```{r, eval = FALSE}
+library(knitr)
+devtools::create("DSI Template")
+```
+This newly created package would just have bunch of core files such as description, 
+namespace, and R folder. Then the next step is to create `inst` folder on the root 
+level as `R` folder and `man` folder. 
+
+I used the following command from Chester's post to create a `skeleton` folder which 
+is 5 levels inside the `inst` folder. 
+
+```{r, eval = FALSE}
+dir.create("dsitemplate/inst/rmarkdown/templates/report/skeleton", recursive = TRUE)
+```
+
+So, far we have created a package and created bunch of empty folders. Next step is 
+to create a new `Rmd` file in `Rstudio`. You can either copy and paste what you 
+want to include in your `Rmd` file. In my case I copied the code that I was using in 
+my presentations. The code looked like following: 
+
+```
+---
+title: "Research Update"
+subtitle: "⚔<br/>Week 12-25 to 12-29"
+author: "Janesh Devkota"
+date: "2016/12/22"
+output:
+  xaringan::moon_reader:
+    css: ["footer-header.css", "default"]
+    lib_dir: libs
+    nature:
+      highlightStyle: github
+      highlightLines: true
+      countIncrementalSlides: false
+---
+
+layout: true
+  
+<div class="my-header"></div>
+
+<div class="my-footer"><span>Company Name   
+</span></div> 
+
+---
+
+```{r setup, include=FALSE, echo = FALSE}
+options(htmltools.dir.version = FALSE)
+```
+```
+I saved this `skeleton.Rmd` file in the `skeleton` folder that we created earlier. 
+Inside the skeleton folder, I copied two other dependent files `footer-header.css` 
+and `logo.png` file. 
+
+One more thing to do before installing the package on our machine. We need to create 
+a `yaml` file. This is very important because if we don't create it, the template 
+would appear in `Rstudio`. 
+
+My `template.yaml` file looks like following:
+
+```
+name: DSI Template
+description: DSI Template
+create_dir: true
+```
+
+You can give the same information for `name` and `description`. In my case, I have 
+added additional dependent files so I have included another option `create_dir: true` 
+as well. 
+
+Now, we are ready to install this package on our machine. To do so, please follow 
+the code below:
+
+```
+> devtools::install("dsitemplate")
+Installing dsitemplate
+"C:/PROGRA~1/R/R-34~1.3/bin/x64/R" --no-site-file --no-environ --no-save --no-restore --quiet CMD INSTALL "D:/Personal Projects/R  \
+  Projects/New folder/template_xaringan/dsitemplate" --library="C:/Users/DSI/Documents/R/win-library/3.4" --install-tests 
+
+* installing *source* package 'dsitemplate' ...
+** inst
+** help
+No man pages found in package  'dsitemplate' 
+*** installing help indices
+  converting help for package 'dsitemplate'
+    finding HTML links ... done
+** building package indices
+** testing if installed package can be loaded
+*** arch - i386
+*** arch - x64
+* DONE (dsitemplate)
+In R CMD INSTALL
+```
+
+Now that we have installed the package, go ahead and close your Rstudio instance and 
+reopen it. Now, if you click new `Rmarkdown` and choose `From Template` you would 
+see the following options:
+
+```{r}
+knitr::include_graphics(path = "../../images/0302_rmarkdowntemplate/rstudio-markdown-fromtemplate.PNG")
+```
+In my case I should give name in the `Name` field and it would create a directory with 
+the template R markdown file as well as css and logo file. 
+
+This is how I created a template for Rmarkdown and now you can too. 
+
+
+

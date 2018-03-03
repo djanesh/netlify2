@@ -22,7 +22,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="generator" content="Hugo 0.30.2 with theme Tranquilpeak 0.4.3-BETA">
-    <title>Extracting water quality data from DataRetrieval R Package</title>
+    <title>R Markdown template in Rstudio</title>
     <meta name="author" content="Janesh Devkota">
     <meta name="keywords" content="">
 
@@ -30,24 +30,15 @@
     
 
     
-    <meta name="description" content="In this blog post, I will be showing some capabilities of dataRetrieval package by USGS to extract water quality data.
-To install the dataRetrieval package use the following command:
-devtools::install_github(repo = &quot;USGS-R/dataRetrieval&quot;)The main function I will be discussing is readWQPdata. The users can search the data using various options as shown below:
-bBox = Bounding box that uses the coordinates of lower left corner and upper right cornerlat / long = lat / long will be specified by the user if they are interested to see if any data is available within radial distance.">
-    <meta property="og:description" content="In this blog post, I will be showing some capabilities of dataRetrieval package by USGS to extract water quality data.
-To install the dataRetrieval package use the following command:
-devtools::install_github(repo = &quot;USGS-R/dataRetrieval&quot;)The main function I will be discussing is readWQPdata. The users can search the data using various options as shown below:
-bBox = Bounding box that uses the coordinates of lower left corner and upper right cornerlat / long = lat / long will be specified by the user if they are interested to see if any data is available within radial distance.">
+    <meta name="description" content="I have been using the xarinagn package developed by Yihui Xie for a while now and have been using that to create presentations within my company. I really like what xaringan offers to the R users. I had modified the YAML of the markdown page a little so that I could have my own css file and my layout which displays company name and logo at the footer. I was copying and pasting the css file and logo file to all the presentation folder I would create.">
+    <meta property="og:description" content="I have been using the xarinagn package developed by Yihui Xie for a while now and have been using that to create presentations within my company. I really like what xaringan offers to the R users. I had modified the YAML of the markdown page a little so that I could have my own css file and my layout which displays company name and logo at the footer. I was copying and pasting the css file and logo file to all the presentation folder I would create.">
     <meta property="og:type" content="blog">
-    <meta property="og:title" content="Extracting water quality data from DataRetrieval R Package">
-    <meta property="og:url" content="/2018/02/extracting-water-quality-data-from-dataretrieval-package/">
+    <meta property="og:title" content="R Markdown template in Rstudio">
+    <meta property="og:url" content="/2018/03/r-markdown-template-in-rstudio/">
     <meta property="og:site_name" content="Janesh Devkota&#39;s Garden">
     <meta name="twitter:card" content="summary">
     <meta name="twitter:title" content="Janesh Devkota&#39;s Garden">
-    <meta name="twitter:description" content="In this blog post, I will be showing some capabilities of dataRetrieval package by USGS to extract water quality data.
-To install the dataRetrieval package use the following command:
-devtools::install_github(repo = &quot;USGS-R/dataRetrieval&quot;)The main function I will be discussing is readWQPdata. The users can search the data using various options as shown below:
-bBox = Bounding box that uses the coordinates of lower left corner and upper right cornerlat / long = lat / long will be specified by the user if they are interested to see if any data is available within radial distance.">
+    <meta name="twitter:description" content="I have been using the xarinagn package developed by Yihui Xie for a while now and have been using that to create presentations within my company. I really like what xaringan offers to the R users. I had modified the YAML of the markdown page a little so that I could have my own css file and my layout which displays company name and logo at the footer. I was copying and pasting the css file and logo file to all the presentation folder I would create.">
     
       <meta name="twitter:creator" content="@janeshdev">
     
@@ -244,15 +235,15 @@ devtools::install_github(repo = &quot;USGS-R/dataRetrieval&quot;)The main funct
             <div class="post-header main-content-wrap text-left">
   
     <h1 class="post-title" itemprop="headline">
-      Extracting water quality data from DataRetrieval R Package
+      R Markdown template in Rstudio
     </h1>
   
   
   <div class="postShorten-meta post-meta">
     
-      <time itemprop="datePublished" datetime="2018-02-19T00:00:00Z">
+      <time itemprop="datePublished" datetime="2018-03-02T00:00:00Z">
         
-  February 19, 2018
+  March 2, 2018
 
       </time>
     
@@ -263,316 +254,71 @@ devtools::install_github(repo = &quot;USGS-R/dataRetrieval&quot;)The main funct
           
           <div class="post-content markdown" itemprop="articleBody">
             <div class="main-content-wrap">
-              <script src="/rmarkdown-libs/htmlwidgets/htmlwidgets.js"></script>
-<script src="/rmarkdown-libs/jquery/jquery.min.js"></script>
-<link href="/rmarkdown-libs/leaflet/leaflet.css" rel="stylesheet" />
-<script src="/rmarkdown-libs/leaflet/leaflet.js"></script>
-<link href="/rmarkdown-libs/leafletfix/leafletfix.css" rel="stylesheet" />
-<link href="/rmarkdown-libs/leaflet-label/leaflet.label.css" rel="stylesheet" />
-<script src="/rmarkdown-libs/leaflet-label/leaflet.label.js"></script>
-<script src="/rmarkdown-libs/Proj4Leaflet/proj4-compressed.js"></script>
-<script src="/rmarkdown-libs/Proj4Leaflet/proj4leaflet.js"></script>
-<script src="/rmarkdown-libs/leaflet-binding/leaflet.js"></script>
-<script src="/rmarkdown-libs/leaflet-providers/leaflet-providers.js"></script>
-<script src="/rmarkdown-libs/leaflet-providers-plugin/leaflet-providers-plugin.js"></script>
+              <p>I have been using the <code>xarinagn</code> package developed by Yihui Xie for a while now and have been using that to create presentations within my company. I really like what <code>xaringan</code> offers to the R users. I had modified the YAML of the <code>markdown</code> page a little so that I could have my own css file and my layout which displays company name and logo at the footer. I was copying and pasting the <code>css</code> file and <code>logo</code> file to all the presentation folder I would create. After sometime of copying and pasting process, I thought to myself that may be somebody has already developed tools for things like this so you can have your own template and that would eliminate this clunky method of copying and pasting to get the desired layout of your presentation.</p>
+<p>I went to our old friend Google and asked on how to create a template on RStudio. Then I found out the post written by <code>Chester Ismay</code> which describes the process of creating your own custom template that can be used in Rstudio. I was very excited.</p>
+<p>The basic principle behind creating these templates is that you would create a R package and would include <code>skeleton.Rmd</code> , and any files that would be required for that <code>skeleton.Rmd</code> and put in the <code>skeleton</code> folder in the <code>inst</code> folder of the package that you create.</p>
+<p>Let me give you an example. We can use <code>devtools</code> R package to create a new package for us. Use the following command to create a new package.</p>
+<pre class="r"><code>library(knitr)
+devtools::create(&quot;DSI Template&quot;)</code></pre>
+<p>This newly created package would just have bunch of core files such as description, namespace, and R folder. Then the next step is to create <code>inst</code> folder on the root level as <code>R</code> folder and <code>man</code> folder.</p>
+<p>I used the following command from Chester’s post to create a <code>skeleton</code> folder which is 5 levels inside the <code>inst</code> folder.</p>
+<pre class="r"><code>dir.create(&quot;dsitemplate/inst/rmarkdown/templates/report/skeleton&quot;, recursive = TRUE)</code></pre>
+<p>So, far we have created a package and created bunch of empty folders. Next step is to create a new <code>Rmd</code> file in <code>Rstudio</code>. You can either copy and paste what you want to include in your <code>Rmd</code> file. In my case I copied the code that I was using in my presentations. The code looked like following:</p>
+<pre><code>---
+title: &quot;Research Update&quot;
+subtitle: &quot;⚔&lt;br/&gt;Week 12-25 to 12-29&quot;
+author: &quot;Janesh Devkota&quot;
+date: &quot;2016/12/22&quot;
+output:
+  xaringan::moon_reader:
+    css: [&quot;footer-header.css&quot;, &quot;default&quot;]
+    lib_dir: libs
+    nature:
+      highlightStyle: github
+      highlightLines: true
+      countIncrementalSlides: false
+---
 
+layout: true
+  
+&lt;div class=&quot;my-header&quot;&gt;&lt;/div&gt;
 
-<p>In this blog post, I will be showing some capabilities of <code>dataRetrieval</code> package by USGS to extract water quality data.</p>
-<p>To install the <code>dataRetrieval</code> package use the following command:</p>
-<pre class="r"><code>devtools::install_github(repo = &quot;USGS-R/dataRetrieval&quot;)</code></pre>
-<p>The main function I will be discussing is <code>readWQPdata</code>. The users can search the data using various options as shown below:</p>
-<ul>
-<li>bBox = Bounding box that uses the coordinates of lower left corner and upper right corner</li>
-<li>lat / long = lat / long will be specified by the user if they are interested to see if any data is available within radial distance.</li>
-<li>countycode</li>
-<li>startDate:</li>
-<li>endDate:</li>
-<li>characteristicType</li>
-<li>characteristicName : CharacteristicName can be one of following</li>
-</ul>
-<pre class="r"><code>read.table(file = &quot;../../data/0219_waterquality/characteristic_name.txt&quot;,sep = &quot;\n&quot;, header = F ) %&gt;%
-  knitr::kable()</code></pre>
-<table>
-<thead>
-<tr class="header">
-<th align="left">V1</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td align="left">Conductivity</td>
-</tr>
-<tr class="even">
-<td align="left">Turbidity</td>
-</tr>
-<tr class="odd">
-<td align="left">Alkalinity, total</td>
-</tr>
-<tr class="even">
-<td align="left">Biochemical oxygen demand, standard conditions</td>
-</tr>
-<tr class="odd">
-<td align="left">Chloride</td>
-</tr>
-<tr class="even">
-<td align="left">Chemical oxygen demand</td>
-</tr>
-<tr class="odd">
-<td align="left">Hardness, Ca, Mg</td>
-</tr>
-<tr class="even">
-<td align="left">Inorganic nitrogen (nitrate and nitrite)</td>
-</tr>
-<tr class="odd">
-<td align="left">Total dissolved solids</td>
-</tr>
-<tr class="even">
-<td align="left">Kjeldahl nitrogen</td>
-</tr>
-<tr class="odd">
-<td align="left">Phosphorus</td>
-</tr>
-<tr class="even">
-<td align="left">Total suspended solids</td>
-</tr>
-<tr class="odd">
-<td align="left">Temperature, air</td>
-</tr>
-<tr class="even">
-<td align="left">Temperature, water</td>
-</tr>
-<tr class="odd">
-<td align="left">pH</td>
-</tr>
-<tr class="even">
-<td align="left">Dissolved oxygen (DO)</td>
-</tr>
-<tr class="odd">
-<td align="left">Weather condition (WMO code 4501) (choice list)</td>
-</tr>
-<tr class="even">
-<td align="left">Cadmium</td>
-</tr>
-<tr class="odd">
-<td align="left">Cyanide</td>
-</tr>
-<tr class="even">
-<td align="left">Chromium</td>
-</tr>
-<tr class="odd">
-<td align="left">Copper</td>
-</tr>
-<tr class="even">
-<td align="left">Fecal Coliform</td>
-</tr>
-<tr class="odd">
-<td align="left">Iron</td>
-</tr>
-<tr class="even">
-<td align="left">Manganese</td>
-</tr>
-<tr class="odd">
-<td align="left">Lead</td>
-</tr>
-<tr class="even">
-<td align="left">Phenol</td>
-</tr>
-<tr class="odd">
-<td align="left">Organic Nitrogen</td>
-</tr>
-<tr class="even">
-<td align="left">Aluminum</td>
-</tr>
-<tr class="odd">
-<td align="left">Arsenic</td>
-</tr>
-<tr class="even">
-<td align="left">Mercury</td>
-</tr>
-<tr class="odd">
-<td align="left">Ammonia-nitrogen</td>
-</tr>
-<tr class="even">
-<td align="left">Silver</td>
-</tr>
-<tr class="odd">
-<td align="left">Nickel</td>
-</tr>
-<tr class="even">
-<td align="left">Zinc</td>
-</tr>
-<tr class="odd">
-<td align="left">Depth, bottom</td>
-</tr>
-<tr class="even">
-<td align="left">RBP Water Odors (choice list)</td>
-</tr>
-<tr class="odd">
-<td align="left">RBP Water Surface Oils (choice list)</td>
-</tr>
-<tr class="even">
-<td align="left">Chlorophyll a</td>
-</tr>
-<tr class="odd">
-<td align="left">Orthophosphate</td>
-</tr>
-<tr class="even">
-<td align="left">Specific conductance</td>
-</tr>
-<tr class="odd">
-<td align="left">Antimony</td>
-</tr>
-<tr class="even">
-<td align="left">Selenium</td>
-</tr>
-<tr class="odd">
-<td align="left">Thallium</td>
-</tr>
-<tr class="even">
-<td align="left">Calcium</td>
-</tr>
-<tr class="odd">
-<td align="left">Magnesium</td>
-</tr>
-<tr class="even">
-<td align="left">Escherichia coli</td>
-</tr>
-<tr class="odd">
-<td align="left">Dissolved oxygen saturation</td>
-</tr>
-<tr class="even">
-<td align="left">Depth, data-logger (non-ported)</td>
-</tr>
-<tr class="odd">
-<td align="left">Light attenuation, depth at 99%</td>
-</tr>
-<tr class="even">
-<td align="left">Depth, Secchi disk depth</td>
-</tr>
-<tr class="odd">
-<td align="left">Flow, stream stage (choice list)</td>
-</tr>
-</tbody>
-</table>
-<div id="extracting-walker-county-temperature-data" class="section level1">
-<h1>Extracting walker county Temperature data</h1>
-<p>Let us try to see how many stations are there is walker county Alabama that has data for 2011 period.</p>
-<p>To find out the countycode we can use the function:</p>
-<pre class="r"><code>dataRetrieval::countyCdLookup(state = &quot;AL&quot;, county = &quot;walker&quot;)</code></pre>
-<pre><code>## [1] &quot;127&quot;</code></pre>
-<p>We can see that the county code of <code>Walker County</code> is <code>127</code>. Now, let us use <code>readWQPdata</code> function with countycode as follows:</p>
-<pre class="r"><code>tempwalkercounty &lt;- readWQPdata(countycode=&quot;US:01:127&quot;,startDate=&quot;2011-01-01&quot;,
-                                endDate = &quot;2011-12-31&quot;,
-                                characteristicName=&quot;Temperature, water&quot;)</code></pre>
-<div id="use-of-bounding-box-to-extract-the-data" class="section level2">
-<h2>Use of bounding box to extract the data</h2>
-<pre class="r"><code>temp_bbox &lt;- readWQPdata(bBox=c(-87.26, 33.59, -87.07, 33.825),
-                              startDate=&quot;2011-01-01&quot;,
-                              endDate = &quot;2011-12-31&quot;,
-                              characteristicName=&quot;Temperature, water&quot;) 
-head(temp_bbox)</code></pre>
-<pre><code>## # A tibble: 6 x 65
-##   OrganizationIden~ OrganizationFormal~ ActivityIdentif~ ActivityTypeCode 
-##   &lt;chr&gt;             &lt;chr&gt;               &lt;chr&gt;            &lt;chr&gt;            
-## 1 21AWIC            ALABAMA DEPT. OF E~ 21AWIC-154896_8~ Field Msr/Obs-Po~
-## 2 21AWIC            ALABAMA DEPT. OF E~ 21AWIC-154889_8~ Field Msr/Obs-Po~
-## 3 21AWIC            ALABAMA DEPT. OF E~ 21AWIC-154889_8~ Field Msr/Obs-Po~
-## 4 21AWIC            ALABAMA DEPT. OF E~ 21AWIC-155417_9~ Field Msr/Obs-Po~
-## 5 21AWIC            ALABAMA DEPT. OF E~ 21AWIC-154896_8~ Field Msr/Obs-Po~
-## 6 21AWIC            ALABAMA DEPT. OF E~ 21AWIC-154911_8~ Field Msr/Obs-Po~
-## # ... with 61 more variables: ActivityMediaName &lt;chr&gt;,
-## #   ActivityMediaSubdivisionName &lt;chr&gt;, ActivityStartDate &lt;date&gt;,
-## #   ActivityStartTime.Time &lt;chr&gt;, ActivityStartTime.TimeZoneCode &lt;chr&gt;,
-## #   ActivityEndDate &lt;date&gt;, ActivityEndTime.Time &lt;chr&gt;,
-## #   ActivityEndTime.TimeZoneCode &lt;chr&gt;,
-## #   ActivityDepthHeightMeasure.MeasureValue &lt;dbl&gt;,
-## #   ActivityDepthHeightMeasure.MeasureUnitCode &lt;chr&gt;,
-## #   ActivityDepthAltitudeReferencePointText &lt;chr&gt;,
-## #   ActivityTopDepthHeightMeasure.MeasureValue &lt;chr&gt;,
-## #   ActivityTopDepthHeightMeasure.MeasureUnitCode &lt;chr&gt;,
-## #   ActivityBottomDepthHeightMeasure.MeasureValue &lt;chr&gt;,
-## #   ActivityBottomDepthHeightMeasure.MeasureUnitCode &lt;chr&gt;,
-## #   ProjectIdentifier &lt;int&gt;, ActivityConductingOrganizationText &lt;chr&gt;,
-## #   MonitoringLocationIdentifier &lt;chr&gt;, ActivityCommentText &lt;chr&gt;,
-## #   SampleAquifer &lt;chr&gt;, HydrologicCondition &lt;chr&gt;, HydrologicEvent &lt;chr&gt;,
-## #   SampleCollectionMethod.MethodIdentifier &lt;chr&gt;,
-## #   SampleCollectionMethod.MethodIdentifierContext &lt;chr&gt;,
-## #   SampleCollectionMethod.MethodName &lt;chr&gt;,
-## #   SampleCollectionEquipmentName &lt;chr&gt;,
-## #   ResultDetectionConditionText &lt;chr&gt;, CharacteristicName &lt;chr&gt;,
-## #   ResultSampleFractionText &lt;chr&gt;, ResultMeasureValue &lt;dbl&gt;,
-## #   ResultMeasure.MeasureUnitCode &lt;chr&gt;, MeasureQualifierCode &lt;chr&gt;,
-## #   ResultStatusIdentifier &lt;chr&gt;, StatisticalBaseCode &lt;chr&gt;,
-## #   ResultValueTypeName &lt;chr&gt;, ResultWeightBasisText &lt;chr&gt;,
-## #   ResultTimeBasisText &lt;chr&gt;, ResultTemperatureBasisText &lt;chr&gt;,
-## #   ResultParticleSizeBasisText &lt;chr&gt;, PrecisionValue &lt;chr&gt;,
-## #   ResultCommentText &lt;chr&gt;, USGSPCode &lt;chr&gt;,
-## #   ResultDepthHeightMeasure.MeasureValue &lt;chr&gt;,
-## #   ResultDepthHeightMeasure.MeasureUnitCode &lt;chr&gt;,
-## #   ResultDepthAltitudeReferencePointText &lt;chr&gt;,
-## #   SubjectTaxonomicName &lt;chr&gt;, SampleTissueAnatomyName &lt;chr&gt;,
-## #   ResultAnalyticalMethod.MethodIdentifier &lt;chr&gt;,
-## #   ResultAnalyticalMethod.MethodIdentifierContext &lt;chr&gt;,
-## #   ResultAnalyticalMethod.MethodName &lt;chr&gt;, MethodDescriptionText &lt;chr&gt;,
-## #   LaboratoryName &lt;chr&gt;, AnalysisStartDate &lt;date&gt;,
-## #   ResultLaboratoryCommentText &lt;chr&gt;,
-## #   DetectionQuantitationLimitTypeName &lt;chr&gt;,
-## #   DetectionQuantitationLimitMeasure.MeasureValue &lt;dbl&gt;,
-## #   DetectionQuantitationLimitMeasure.MeasureUnitCode &lt;chr&gt;,
-## #   PreparationStartDate &lt;date&gt;, ProviderName &lt;chr&gt;,
-## #   ActivityStartDateTime &lt;dttm&gt;, ActivityEndDateTime &lt;dttm&gt;</code></pre>
-</div>
-<div id="extracting-the-site-information-from-temp_bbox" class="section level2">
-<h2>Extracting the site information from <code>temp_bbox</code></h2>
-<pre class="r"><code>siteInfo &lt;- attr(temp_bbox, &quot;siteInfo&quot;)
-head(as.tibble(siteInfo))</code></pre>
-<pre><code>## # A tibble: 5 x 42
-##   station_nm agency_cd site_no     dec_lat_va dec_lon_va hucCd   
-##   &lt;chr&gt;      &lt;chr&gt;     &lt;chr&gt;            &lt;dbl&gt;      &lt;dbl&gt; &lt;chr&gt;   
-## 1 CLCJ-1     21AWIC    21AWIC-2228       33.6      -87.1 03160111
-## 2 CLCJ-3     21AWIC    21AWIC-7015       33.6      -87.1 03160111
-## 3 CLCJ-4     21AWIC    21AWIC-7016       33.6      -87.1 03160111
-## 4 CHMJ-47    21AWIC    21AWIC-7033       33.6      -87.1 03160111
-## 5 WIMJ-1     21AWIC    21AWIC-7034       33.6      -87.1 03160111
-## # ... with 36 more variables: OrganizationIdentifier &lt;chr&gt;,
-## #   OrganizationFormalName &lt;chr&gt;, MonitoringLocationIdentifier &lt;chr&gt;,
-## #   MonitoringLocationName &lt;chr&gt;, MonitoringLocationTypeName &lt;chr&gt;,
-## #   MonitoringLocationDescriptionText &lt;chr&gt;, HUCEightDigitCode &lt;chr&gt;,
-## #   DrainageAreaMeasure.MeasureValue &lt;chr&gt;,
-## #   DrainageAreaMeasure.MeasureUnitCode &lt;chr&gt;,
-## #   ContributingDrainageAreaMeasure.MeasureValue &lt;chr&gt;,
-## #   ContributingDrainageAreaMeasure.MeasureUnitCode &lt;chr&gt;,
-## #   LatitudeMeasure &lt;dbl&gt;, LongitudeMeasure &lt;dbl&gt;,
-## #   SourceMapScaleNumeric &lt;int&gt;,
-## #   HorizontalAccuracyMeasure.MeasureValue &lt;chr&gt;,
-## #   HorizontalAccuracyMeasure.MeasureUnitCode &lt;chr&gt;,
-## #   HorizontalCollectionMethodName &lt;chr&gt;,
-## #   HorizontalCoordinateReferenceSystemDatumName &lt;chr&gt;,
-## #   VerticalMeasure.MeasureValue &lt;chr&gt;,
-## #   VerticalMeasure.MeasureUnitCode &lt;chr&gt;,
-## #   VerticalAccuracyMeasure.MeasureValue &lt;chr&gt;,
-## #   VerticalAccuracyMeasure.MeasureUnitCode &lt;chr&gt;,
-## #   VerticalCollectionMethodName &lt;chr&gt;,
-## #   VerticalCoordinateReferenceSystemDatumName &lt;chr&gt;, CountryCode &lt;chr&gt;,
-## #   StateCode &lt;chr&gt;, CountyCode &lt;chr&gt;, AquiferName &lt;chr&gt;,
-## #   FormationTypeText &lt;chr&gt;, AquiferTypeName &lt;chr&gt;,
-## #   ConstructionDateText &lt;chr&gt;, WellDepthMeasure.MeasureValue &lt;dbl&gt;,
-## #   WellDepthMeasure.MeasureUnitCode &lt;chr&gt;,
-## #   WellHoleDepthMeasure.MeasureValue &lt;dbl&gt;,
-## #   WellHoleDepthMeasure.MeasureUnitCode &lt;chr&gt;, ProviderName &lt;chr&gt;</code></pre>
-</div>
-<div id="plot-stations-using-leaflet-library." class="section level2">
-<h2>Plot stations using <code>leaflet</code> library.</h2>
-<pre class="r"><code>library(leaflet)
-m &lt;- leaflet(siteInfo) %&gt;% 
-  addProviderTiles(providers$OpenStreetMap) %&gt;% 
-  addCircleMarkers(~dec_lon_va, ~dec_lat_va, color = &quot;red&quot;, popup = ~station_nm)
-m </code></pre>
-<div id="htmlwidget-1" style="width:672px;height:480px;" class="leaflet html-widget"></div>
-<script type="application/json" data-for="htmlwidget-1">{"x":{"options":{"crs":{"crsClass":"L.CRS.EPSG3857","code":null,"proj4def":null,"projectedBounds":null,"options":{}}},"calls":[{"method":"addProviderTiles","args":["OpenStreetMap",null,null,{"errorTileUrl":"","noWrap":false,"zIndex":null,"unloadInvisibleTiles":null,"updateWhenIdle":null,"detectRetina":false,"reuseTiles":false}]},{"method":"addCircleMarkers","args":[[33.612475,33.607237,33.600105,33.609161,33.601111],[-87.13851,-87.135261,-87.138493,-87.135563,-87.139167],10,null,null,{"lineCap":null,"lineJoin":null,"clickable":true,"pointerEvents":null,"className":"","stroke":true,"color":"red","weight":5,"opacity":0.5,"fill":true,"fillColor":"red","fillOpacity":0.2,"dashArray":null},null,null,["CLCJ-1","CLCJ-3","CLCJ-4","CHMJ-47","WIMJ-1"],null,null,null,null]}],"limits":{"lat":[33.600105,33.612475],"lng":[-87.139167,-87.135261]}},"evals":[],"jsHooks":[]}</script>
-<p>I have just scratched the surface here and would like to encourage you guys to visit the full tutorial at <code>https://owi.usgs.gov/R/dataRetrieval.html#1</code>.</p>
-</div>
-</div>
+&lt;div class=&quot;my-footer&quot;&gt;&lt;span&gt;Company Name   
+&lt;/span&gt;&lt;/div&gt; 
+
+---
+
+</code></pre>
+<p>I saved this <code>skeleton.Rmd</code> file in the <code>skeleton</code> folder that we created earlier. Inside the skeleton folder, I copied two other dependent files <code>footer-header.css</code> and <code>logo.png</code> file.</p>
+<p>One more thing to do before installing the package on our machine. We need to create a <code>yaml</code> file. This is very important because if we don’t create it, the template would appear in <code>Rstudio</code>.</p>
+<p>My <code>template.yaml</code> file looks like following:</p>
+<pre><code>name: DSI Template
+description: DSI Template
+create_dir: true</code></pre>
+<p>You can give the same information for <code>name</code> and <code>description</code>. In my case, I have added additional dependent files so I have included another option <code>create_dir: true</code> as well.</p>
+<p>Now, we are ready to install this package on our machine. To do so, please follow the code below:</p>
+<pre><code>&gt; devtools::install(&quot;dsitemplate&quot;)
+Installing dsitemplate
+&quot;C:/PROGRA~1/R/R-34~1.3/bin/x64/R&quot; --no-site-file --no-environ --no-save --no-restore --quiet CMD INSTALL &quot;D:/Personal Projects/R  \
+  Projects/New folder/template_xaringan/dsitemplate&quot; --library=&quot;C:/Users/DSI/Documents/R/win-library/3.4&quot; --install-tests 
+
+* installing *source* package &#39;dsitemplate&#39; ...
+** inst
+** help
+No man pages found in package  &#39;dsitemplate&#39; 
+*** installing help indices
+  converting help for package &#39;dsitemplate&#39;
+    finding HTML links ... done
+** building package indices
+** testing if installed package can be loaded
+*** arch - i386
+*** arch - x64
+* DONE (dsitemplate)
+In R CMD INSTALL</code></pre>
+<p>Now that we have installed the package, go ahead and close your Rstudio instance and reopen it. Now, if you click new <code>Rmarkdown</code> and choose <code>From Template</code> you would see the following options:</p>
+<pre class="r"><code>knitr::include_graphics(path = &quot;../../images/0302_rmarkdowntemplate/rstudio-markdown-fromtemplate.PNG&quot;)</code></pre>
+<p><img src="../../images/0302_rmarkdowntemplate/rstudio-markdown-fromtemplate.PNG" width="294" /> In my case I should give name in the <code>Name</code> field and it would create a directory with the template R markdown file as well as css and logo file.</p>
+<p>This is how I created a template for Rmarkdown and now you can too.</p>
 
               
             </div>
@@ -588,7 +334,7 @@ m </code></pre>
           
             <li class="post-action">
               
-                <a class="post-action-btn btn btn--default tooltip--top" href="/2018/03/r-markdown-template-in-rstudio/" data-tooltip="R Markdown template in Rstudio">
+                <a class="post-action-btn btn btn--disabled">
               
                   <i class="fa fa-angle-left"></i>
                   <span class="hide-xs hide-sm text-small icon-ml">NEXT</span>
@@ -596,7 +342,7 @@ m </code></pre>
             </li>
             <li class="post-action">
               
-                <a class="post-action-btn btn btn--default tooltip--top" href="/2017/12/machine-learning-cards-from-twitter-in-r/" data-tooltip="Machine learning Cards from Twitter in R">
+                <a class="post-action-btn btn btn--default tooltip--top" href="/2018/02/extracting-water-quality-data-from-dataretrieval-package/" data-tooltip="Extracting water quality data from DataRetrieval R Package">
               
                   <span class="hide-xs hide-sm text-small icon-mr">PREVIOUS</span>
                   <i class="fa fa-angle-right"></i>
@@ -614,19 +360,19 @@ m </code></pre>
         </li>
         
           <li class="post-action hide-xs">
-            <a class="post-action-btn btn btn--default" target="new" href="https://www.facebook.com/sharer/sharer.php?u=/2018/02/extracting-water-quality-data-from-dataretrieval-package/">
+            <a class="post-action-btn btn btn--default" target="new" href="https://www.facebook.com/sharer/sharer.php?u=/2018/03/r-markdown-template-in-rstudio/">
               <i class="fa fa-facebook-official"></i>
             </a>
           </li>
         
           <li class="post-action hide-xs">
-            <a class="post-action-btn btn btn--default" target="new" href="https://twitter.com/intent/tweet?text=/2018/02/extracting-water-quality-data-from-dataretrieval-package/">
+            <a class="post-action-btn btn btn--default" target="new" href="https://twitter.com/intent/tweet?text=/2018/03/r-markdown-template-in-rstudio/">
               <i class="fa fa-twitter"></i>
             </a>
           </li>
         
           <li class="post-action hide-xs">
-            <a class="post-action-btn btn btn--default" target="new" href="https://plus.google.com/share?url=/2018/02/extracting-water-quality-data-from-dataretrieval-package/">
+            <a class="post-action-btn btn btn--default" target="new" href="https://plus.google.com/share?url=/2018/03/r-markdown-template-in-rstudio/">
               <i class="fa fa-google-plus"></i>
             </a>
           </li>
@@ -674,7 +420,7 @@ m </code></pre>
           
             <li class="post-action">
               
-                <a class="post-action-btn btn btn--default tooltip--top" href="/2018/03/r-markdown-template-in-rstudio/" data-tooltip="R Markdown template in Rstudio">
+                <a class="post-action-btn btn btn--disabled">
               
                   <i class="fa fa-angle-left"></i>
                   <span class="hide-xs hide-sm text-small icon-ml">NEXT</span>
@@ -682,7 +428,7 @@ m </code></pre>
             </li>
             <li class="post-action">
               
-                <a class="post-action-btn btn btn--default tooltip--top" href="/2017/12/machine-learning-cards-from-twitter-in-r/" data-tooltip="Machine learning Cards from Twitter in R">
+                <a class="post-action-btn btn btn--default tooltip--top" href="/2018/02/extracting-water-quality-data-from-dataretrieval-package/" data-tooltip="Extracting water quality data from DataRetrieval R Package">
               
                   <span class="hide-xs hide-sm text-small icon-mr">PREVIOUS</span>
                   <i class="fa fa-angle-right"></i>
@@ -700,19 +446,19 @@ m </code></pre>
         </li>
         
           <li class="post-action hide-xs">
-            <a class="post-action-btn btn btn--default" target="new" href="https://www.facebook.com/sharer/sharer.php?u=/2018/02/extracting-water-quality-data-from-dataretrieval-package/">
+            <a class="post-action-btn btn btn--default" target="new" href="https://www.facebook.com/sharer/sharer.php?u=/2018/03/r-markdown-template-in-rstudio/">
               <i class="fa fa-facebook-official"></i>
             </a>
           </li>
         
           <li class="post-action hide-xs">
-            <a class="post-action-btn btn btn--default" target="new" href="https://twitter.com/intent/tweet?text=/2018/02/extracting-water-quality-data-from-dataretrieval-package/">
+            <a class="post-action-btn btn btn--default" target="new" href="https://twitter.com/intent/tweet?text=/2018/03/r-markdown-template-in-rstudio/">
               <i class="fa fa-twitter"></i>
             </a>
           </li>
         
           <li class="post-action hide-xs">
-            <a class="post-action-btn btn btn--default" target="new" href="https://plus.google.com/share?url=/2018/02/extracting-water-quality-data-from-dataretrieval-package/">
+            <a class="post-action-btn btn btn--default" target="new" href="https://plus.google.com/share?url=/2018/03/r-markdown-template-in-rstudio/">
               <i class="fa fa-google-plus"></i>
             </a>
           </li>
@@ -742,19 +488,19 @@ m </code></pre>
   <ul class="share-options">
     
       <li class="share-option">
-        <a class="share-option-btn" target="new" href="https://www.facebook.com/sharer/sharer.php?u=%2F2018%2F02%2Fextracting-water-quality-data-from-dataretrieval-package%2F">
+        <a class="share-option-btn" target="new" href="https://www.facebook.com/sharer/sharer.php?u=%2F2018%2F03%2Fr-markdown-template-in-rstudio%2F">
           <i class="fa fa-facebook-official"></i><span>Share on Facebook</span>
         </a>
       </li>
     
       <li class="share-option">
-        <a class="share-option-btn" target="new" href="https://twitter.com/intent/tweet?text=%2F2018%2F02%2Fextracting-water-quality-data-from-dataretrieval-package%2F">
+        <a class="share-option-btn" target="new" href="https://twitter.com/intent/tweet?text=%2F2018%2F03%2Fr-markdown-template-in-rstudio%2F">
           <i class="fa fa-twitter"></i><span>Share on Twitter</span>
         </a>
       </li>
     
       <li class="share-option">
-        <a class="share-option-btn" target="new" href="https://plus.google.com/share?url=%2F2018%2F02%2Fextracting-water-quality-data-from-dataretrieval-package%2F">
+        <a class="share-option-btn" target="new" href="https://plus.google.com/share?url=%2F2018%2F03%2Fr-markdown-template-in-rstudio%2F">
           <i class="fa fa-google-plus"></i><span>Share on Google&#43;</span>
         </a>
       </li>
@@ -968,9 +714,9 @@ $(document).ready(function() {
     
       <script>
         var disqus_config = function () {
-          this.page.url = '\/2018\/02\/extracting-water-quality-data-from-dataretrieval-package\/';
+          this.page.url = '\/2018\/03\/r-markdown-template-in-rstudio\/';
           
-            this.page.identifier = '\/2018\/02\/extracting-water-quality-data-from-dataretrieval-package\/'
+            this.page.identifier = '\/2018\/03\/r-markdown-template-in-rstudio\/'
           
         };
         (function() {
