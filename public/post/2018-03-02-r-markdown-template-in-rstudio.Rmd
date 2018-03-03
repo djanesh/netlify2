@@ -127,7 +127,7 @@ reopen it. Now, if you click new `Rmarkdown` and choose `From Template` you woul
 see the following options:
 
 ```{r}
-knitr::include_graphics(path = "../../images/0302_rmarkdowntemplate/rstudio-markdown-fromtemplate.PNG")
+knitr::include_graphics(path = "images/0302_rmarkdowntemplate/rstudio-markdown-fromtemplate.PNG")
 ```
 In my case I should give name in the `Name` field and it would create a directory with 
 the template R markdown file as well as css and logo file. 
