@@ -36,8 +36,11 @@ library(leaflet)
 library(DT)
 library(tibble)
 library(DT)
+```
+
+```{r, echo = TRUE, warning=FALSE}
 read.table(file = "../../data/0219_waterquality/characteristic_name.txt",sep = "\n", header = F ) %>%
-  DT::datatable()
+  knitr::kable()
 ```
 
 

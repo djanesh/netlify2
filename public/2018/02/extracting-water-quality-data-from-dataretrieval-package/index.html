@@ -265,13 +265,6 @@ devtools::install_github(repo = &quot;USGS-R/dataRetrieval&quot;)The main funct
             <div class="main-content-wrap">
               <script src="/rmarkdown-libs/htmlwidgets/htmlwidgets.js"></script>
 <script src="/rmarkdown-libs/jquery/jquery.min.js"></script>
-<link href="/rmarkdown-libs/datatables-css/datatables-crosstalk.css" rel="stylesheet" />
-<script src="/rmarkdown-libs/datatables-binding/datatables.js"></script>
-<link href="/rmarkdown-libs/dt-core/css/jquery.dataTables.min.css" rel="stylesheet" />
-<link href="/rmarkdown-libs/dt-core/css/jquery.dataTables.extra.css" rel="stylesheet" />
-<script src="/rmarkdown-libs/dt-core/js/jquery.dataTables.min.js"></script>
-<link href="/rmarkdown-libs/crosstalk/css/crosstalk.css" rel="stylesheet" />
-<script src="/rmarkdown-libs/crosstalk/js/crosstalk.min.js"></script>
 <link href="/rmarkdown-libs/leaflet/leaflet.css" rel="stylesheet" />
 <script src="/rmarkdown-libs/leaflet/leaflet.js"></script>
 <link href="/rmarkdown-libs/leafletfix/leafletfix.css" rel="stylesheet" />
@@ -297,8 +290,170 @@ devtools::install_github(repo = &quot;USGS-R/dataRetrieval&quot;)The main funct
 <li>characteristicType</li>
 <li>characteristicName : CharacteristicName can be one of following</li>
 </ul>
-<div id="htmlwidget-1" style="width:100%;height:auto;" class="datatables html-widget"></div>
-<script type="application/json" data-for="htmlwidget-1">{"x":{"filter":"none","data":[["1","2","3","4","5","6","7","8","9","10","11","12","13","14","15","16","17","18","19","20","21","22","23","24","25","26","27","28","29","30","31","32","33","34","35","36","37","38","39","40","41","42","43","44","45","46","47","48","49","50","51"],["Conductivity","Turbidity","Alkalinity, total","Biochemical oxygen demand, standard conditions","Chloride","Chemical oxygen demand","Hardness, Ca, Mg","Inorganic nitrogen (nitrate and nitrite)","Total dissolved solids","Kjeldahl nitrogen","Phosphorus","Total suspended solids","Temperature, air","Temperature, water","pH","Dissolved oxygen (DO)","Weather condition (WMO code 4501) (choice list)","Cadmium","Cyanide","Chromium","Copper","Fecal Coliform","Iron","Manganese","Lead","Phenol","Organic Nitrogen","Aluminum","Arsenic","Mercury","Ammonia-nitrogen","Silver","Nickel","Zinc","Depth, bottom","RBP Water Odors (choice list)","RBP Water Surface Oils (choice list)","Chlorophyll a","Orthophosphate","Specific conductance","Antimony","Selenium","Thallium","Calcium","Magnesium","Escherichia coli","Dissolved oxygen saturation","Depth, data-logger (non-ported)","Light attenuation, depth at 99%","Depth, Secchi disk depth","Flow, stream stage (choice list)"]],"container":"<table class=\"display\">\n  <thead>\n    <tr>\n      <th> <\/th>\n      <th>V1<\/th>\n    <\/tr>\n  <\/thead>\n<\/table>","options":{"order":[],"autoWidth":false,"orderClasses":false,"columnDefs":[{"orderable":false,"targets":0}]}},"evals":[],"jsHooks":[]}</script>
+<pre class="r"><code>read.table(file = &quot;../../data/0219_waterquality/characteristic_name.txt&quot;,sep = &quot;\n&quot;, header = F ) %&gt;%
+  knitr::kable()</code></pre>
+<table>
+<thead>
+<tr class="header">
+<th align="left">V1</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="left">Conductivity</td>
+</tr>
+<tr class="even">
+<td align="left">Turbidity</td>
+</tr>
+<tr class="odd">
+<td align="left">Alkalinity, total</td>
+</tr>
+<tr class="even">
+<td align="left">Biochemical oxygen demand, standard conditions</td>
+</tr>
+<tr class="odd">
+<td align="left">Chloride</td>
+</tr>
+<tr class="even">
+<td align="left">Chemical oxygen demand</td>
+</tr>
+<tr class="odd">
+<td align="left">Hardness, Ca, Mg</td>
+</tr>
+<tr class="even">
+<td align="left">Inorganic nitrogen (nitrate and nitrite)</td>
+</tr>
+<tr class="odd">
+<td align="left">Total dissolved solids</td>
+</tr>
+<tr class="even">
+<td align="left">Kjeldahl nitrogen</td>
+</tr>
+<tr class="odd">
+<td align="left">Phosphorus</td>
+</tr>
+<tr class="even">
+<td align="left">Total suspended solids</td>
+</tr>
+<tr class="odd">
+<td align="left">Temperature, air</td>
+</tr>
+<tr class="even">
+<td align="left">Temperature, water</td>
+</tr>
+<tr class="odd">
+<td align="left">pH</td>
+</tr>
+<tr class="even">
+<td align="left">Dissolved oxygen (DO)</td>
+</tr>
+<tr class="odd">
+<td align="left">Weather condition (WMO code 4501) (choice list)</td>
+</tr>
+<tr class="even">
+<td align="left">Cadmium</td>
+</tr>
+<tr class="odd">
+<td align="left">Cyanide</td>
+</tr>
+<tr class="even">
+<td align="left">Chromium</td>
+</tr>
+<tr class="odd">
+<td align="left">Copper</td>
+</tr>
+<tr class="even">
+<td align="left">Fecal Coliform</td>
+</tr>
+<tr class="odd">
+<td align="left">Iron</td>
+</tr>
+<tr class="even">
+<td align="left">Manganese</td>
+</tr>
+<tr class="odd">
+<td align="left">Lead</td>
+</tr>
+<tr class="even">
+<td align="left">Phenol</td>
+</tr>
+<tr class="odd">
+<td align="left">Organic Nitrogen</td>
+</tr>
+<tr class="even">
+<td align="left">Aluminum</td>
+</tr>
+<tr class="odd">
+<td align="left">Arsenic</td>
+</tr>
+<tr class="even">
+<td align="left">Mercury</td>
+</tr>
+<tr class="odd">
+<td align="left">Ammonia-nitrogen</td>
+</tr>
+<tr class="even">
+<td align="left">Silver</td>
+</tr>
+<tr class="odd">
+<td align="left">Nickel</td>
+</tr>
+<tr class="even">
+<td align="left">Zinc</td>
+</tr>
+<tr class="odd">
+<td align="left">Depth, bottom</td>
+</tr>
+<tr class="even">
+<td align="left">RBP Water Odors (choice list)</td>
+</tr>
+<tr class="odd">
+<td align="left">RBP Water Surface Oils (choice list)</td>
+</tr>
+<tr class="even">
+<td align="left">Chlorophyll a</td>
+</tr>
+<tr class="odd">
+<td align="left">Orthophosphate</td>
+</tr>
+<tr class="even">
+<td align="left">Specific conductance</td>
+</tr>
+<tr class="odd">
+<td align="left">Antimony</td>
+</tr>
+<tr class="even">
+<td align="left">Selenium</td>
+</tr>
+<tr class="odd">
+<td align="left">Thallium</td>
+</tr>
+<tr class="even">
+<td align="left">Calcium</td>
+</tr>
+<tr class="odd">
+<td align="left">Magnesium</td>
+</tr>
+<tr class="even">
+<td align="left">Escherichia coli</td>
+</tr>
+<tr class="odd">
+<td align="left">Dissolved oxygen saturation</td>
+</tr>
+<tr class="even">
+<td align="left">Depth, data-logger (non-ported)</td>
+</tr>
+<tr class="odd">
+<td align="left">Light attenuation, depth at 99%</td>
+</tr>
+<tr class="even">
+<td align="left">Depth, Secchi disk depth</td>
+</tr>
+<tr class="odd">
+<td align="left">Flow, stream stage (choice list)</td>
+</tr>
+</tbody>
+</table>
 <div id="extracting-walker-county-temperature-data" class="section level1">
 <h1>Extracting walker county Temperature data</h1>
 <p>Let us try to see how many stations are there is walker county Alabama that has data for 2011 period.</p>
@@ -409,11 +564,12 @@ head(as.tibble(siteInfo))</code></pre>
 <div id="plot-stations-using-leaflet-library." class="section level2">
 <h2>Plot stations using <code>leaflet</code> library.</h2>
 <pre class="r"><code>library(leaflet)
-leaflet(siteInfo) %&gt;% 
+m &lt;- leaflet(siteInfo) %&gt;% 
   addProviderTiles(providers$OpenStreetMap) %&gt;% 
-  addCircleMarkers(~dec_lon_va, ~dec_lat_va, color = &quot;red&quot;, popup = ~station_nm)</code></pre>
-<div id="htmlwidget-2" style="width:672px;height:480px;" class="leaflet html-widget"></div>
-<script type="application/json" data-for="htmlwidget-2">{"x":{"options":{"crs":{"crsClass":"L.CRS.EPSG3857","code":null,"proj4def":null,"projectedBounds":null,"options":{}}},"calls":[{"method":"addProviderTiles","args":["OpenStreetMap",null,null,{"errorTileUrl":"","noWrap":false,"zIndex":null,"unloadInvisibleTiles":null,"updateWhenIdle":null,"detectRetina":false,"reuseTiles":false}]},{"method":"addCircleMarkers","args":[[33.612475,33.607237,33.600105,33.609161,33.601111],[-87.13851,-87.135261,-87.138493,-87.135563,-87.139167],10,null,null,{"lineCap":null,"lineJoin":null,"clickable":true,"pointerEvents":null,"className":"","stroke":true,"color":"red","weight":5,"opacity":0.5,"fill":true,"fillColor":"red","fillOpacity":0.2,"dashArray":null},null,null,["CLCJ-1","CLCJ-3","CLCJ-4","CHMJ-47","WIMJ-1"],null,null,null,null]}],"limits":{"lat":[33.600105,33.612475],"lng":[-87.139167,-87.135261]}},"evals":[],"jsHooks":[]}</script>
+  addCircleMarkers(~dec_lon_va, ~dec_lat_va, color = &quot;red&quot;, popup = ~station_nm)
+m </code></pre>
+<div id="htmlwidget-1" style="width:672px;height:480px;" class="leaflet html-widget"></div>
+<script type="application/json" data-for="htmlwidget-1">{"x":{"options":{"crs":{"crsClass":"L.CRS.EPSG3857","code":null,"proj4def":null,"projectedBounds":null,"options":{}}},"calls":[{"method":"addProviderTiles","args":["OpenStreetMap",null,null,{"errorTileUrl":"","noWrap":false,"zIndex":null,"unloadInvisibleTiles":null,"updateWhenIdle":null,"detectRetina":false,"reuseTiles":false}]},{"method":"addCircleMarkers","args":[[33.612475,33.607237,33.600105,33.609161,33.601111],[-87.13851,-87.135261,-87.138493,-87.135563,-87.139167],10,null,null,{"lineCap":null,"lineJoin":null,"clickable":true,"pointerEvents":null,"className":"","stroke":true,"color":"red","weight":5,"opacity":0.5,"fill":true,"fillColor":"red","fillOpacity":0.2,"dashArray":null},null,null,["CLCJ-1","CLCJ-3","CLCJ-4","CHMJ-47","WIMJ-1"],null,null,null,null]}],"limits":{"lat":[33.600105,33.612475],"lng":[-87.139167,-87.135261]}},"evals":[],"jsHooks":[]}</script>
 <p>I have just scratched the surface here and would like to encourage you guys to visit the full tutorial at <code>https://owi.usgs.gov/R/dataRetrieval.html#1</code>.</p>
 </div>
 </div>
