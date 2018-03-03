@@ -126,9 +126,10 @@ Now that we have installed the package, go ahead and close your Rstudio instance
 reopen it. Now, if you click new `Rmarkdown` and choose `From Template` you would 
 see the following options:
 
-```{r}
-knitr::include_graphics(path = "images/0302_rmarkdowntemplate/rstudio-markdown-fromtemplate.PNG")
-```
+![Rstudio-Markdown-Template](https://snag.gy/ExJ5QN.jpg)
+
+
+
 In my case I should give name in the `Name` field and it would create a directory with 
 the template R markdown file as well as css and logo file. 
 
