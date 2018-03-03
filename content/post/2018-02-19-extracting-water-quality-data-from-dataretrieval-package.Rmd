@@ -1,5 +1,5 @@
 ---
-title: Extracting water quality data from DataRetrieval Package
+title: Extracting water quality data from DataRetrieval R Package
 author: ~
 date: '2018-02-19'
 slug: extracting-water-quality-data-from-dataretrieval-package
@@ -8,7 +8,7 @@ tags: []
 ---
 
 In this blog post, I will be showing some capabilities of `dataRetrieval` package
-by USGS to extract water quality data. 
+by USGS to extract water quality data.  
 
 To install the `dataRetrieval` package use the following command:
 
