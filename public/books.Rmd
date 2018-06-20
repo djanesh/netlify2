@@ -15,7 +15,7 @@ slug: books
 * Rich dad poor dad
 * The Alchemist Summary of the Alchemist
 * Mens are from Mars, Women are from Venus
-* The Fountainhead by Ayn Rand A quick summary of The fountainhead
+* The Fountainhead by Ayn Rand
 * For men only, A straightforward guide to the inner lives of women
 
   * ### May 2018
