@@ -83,6 +83,12 @@ min_version = 0.20
   name = "Publications"
   pre = "<i class=\"sidebar-button-icon fa fa-lg fa-archive\"></i>"
   url = "/publications/index.html"
+[[menu.main]]
+  weight = 7
+  identifier = "books"
+  name = "Books"
+  pre = "<i class=\"sidebar-button-icon fa fa-lg fa-archive\"></i>"
+  url = "/books/index.html"
   
 [[menu.links]]
   weight = 1
