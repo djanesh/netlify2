@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Publications on Janesh Devkota&#39;s Garden</title>
+    <link>/categories/publications/</link>
+    <description>Recent content in Publications on Janesh Devkota&#39;s Garden</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Wed, 15 Nov 2017 00:00:00 +0000</lastBuildDate>
+    
+	<atom:link href="/categories/publications/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Publications / Presentations / Project Experience</title>
+      <link>/publications/</link>
+      <pubDate>Wed, 15 Nov 2017 00:00:00 +0000</pubDate>
+      
+      <guid>/publications/</guid>
+      <description>PublicationsDevkota, J., Fang, X., and Fang, V. Z. (2013). “Response characteristics of Perdido and Wolf Bay system to inflows and sea level rise.” British Journal of Environment and Climate Change, 3(2), 229-256.Devkota, J., and Fang, X. (2014). “Numerical simulation of flow dynamics in a tidal river under various upstream hydrologic conditions.” Hydrological Sciences Journal, 1-24.Devkota, J., and Fang, X. (2015). “Quantification of Water and Salt Exchanges in a Tidal Estuary.</description>
+    </item>
+    
+  </channel>
+</rss>

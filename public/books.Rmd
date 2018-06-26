@@ -27,10 +27,10 @@ slug: books
     * The 10x Rule by Grant Cardone
     * The Fred Factor by Mark Sanborne
     * The new one Minute Manager
+    * Start with why by Simon Sinek
     
 ## Books to Read
 
-* Start with why by Simon Sinek
 * Everything happens for a reason by Kate Bowler
 * Leonardo Da Vinci by Walter Isaacson
 * Harry Potter and the Sorceror's stone
