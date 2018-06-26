@@ -9,6 +9,7 @@ slug: books
 
 * Into Thin Air - Jon Krakauer
 * The Power of Now - Echart Tolle
+* Machine Learning yearning - Andrew Ng [Read through chapters 1-10, [source](https://gallery.mailchimp.com/dc3a7ef4d750c0abfc19202a3/files/0d2d4a3b-96ab-4a8e-aa15-9320a70852b8/NG_MLY01_10.pdf)]
 
 ## Books Read 
 
@@ -26,7 +27,7 @@ slug: books
     * The Outliers by Malcolm Galdwell
     * The 10x Rule by Grant Cardone
     * The Fred Factor by Mark Sanborne
-    * The new one Minute Manager
+    * The new one Minute Manager by Ken Blanchard and Spencer Johnson
     * Start with why by Simon Sinek
     
 ## Books to Read
