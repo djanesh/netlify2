@@ -32,6 +32,8 @@ slug: books
     
 ## Books to Read
 
+* David and Goliath by Malcolm Gladwell
+* Blink by Malcom Gladwell
 * Everything happens for a reason by Kate Bowler
 * Leonardo Da Vinci by Walter Isaacson
 * Harry Potter and the Sorceror's stone
